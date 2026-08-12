@@ -1,122 +1,703 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { useEffect, useState } from "react";
 
-function App() {
-  const [count, setCount] = useState(0)
+import Question from "./components/Question";
+import QuestionNavigator from "./components/QuestionNavigator";
+import ResultsSummary from "./components/ResultsSummary";
+import AnswerReview from "./components/AnswerReview";
 
-  return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+import HomePage from "./pages/HomePage";
 
-      <div className="ticks"></div>
+import simulations from "./data/simulations";
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+import calculateScore from "./utils/calculateScore";
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+import "./styles/quiz.css";
+import "./styles/review.css";
+const COMPLETED_STORAGE_KEY =
+  "formazione-primaria-completed-simulations";
+
+const PROGRESS_STORAGE_KEY =
+  "formazione-primaria-simulation-progress";
+
+function loadStorage(key) {
+  const savedData = localStorage.getItem(key);
+
+  if (!savedData) {
+    return {};
+  }
+
+  try {
+    return JSON.parse(savedData);
+  } catch {
+    return {};
+  }
 }
 
-export default App
+function App() {
+  const [currentPage, setCurrentPage] =
+    useState("home");
+
+  const [
+    currentSimulationId,
+    setCurrentSimulationId,
+  ] = useState(simulations[0]?.id ?? "");
+
+  const [
+    currentQuestionIndex,
+    setCurrentQuestionIndex,
+  ] = useState(0);
+
+  const [answers, setAnswers] =
+    useState({});
+
+  const [isSubmitted, setIsSubmitted] =
+    useState(false);
+
+  const [isReviewing, setIsReviewing] =
+    useState(false);
+
+  const [
+    isConfirmingSubmit,
+    setIsConfirmingSubmit,
+  ] = useState(false);
+
+  const [
+    completedSimulations,
+    setCompletedSimulations,
+  ] = useState(() =>
+    loadStorage(COMPLETED_STORAGE_KEY),
+  );
+
+  const [
+    simulationProgress,
+    setSimulationProgress,
+  ] = useState(() =>
+    loadStorage(PROGRESS_STORAGE_KEY),
+  );
+
+  const currentSimulation =
+    simulations.find(
+      (simulation) =>
+        simulation.id === currentSimulationId,
+    ) ?? simulations[0];
+
+  const currentQuestions =
+    currentSimulation?.questions ?? [];
+
+  const currentQuestion =
+    currentQuestions[currentQuestionIndex];
+
+  const score = calculateScore(
+    currentQuestions,
+    answers,
+  );
+
+  const answeredQuestions =
+    Object.keys(answers).length;
+
+  const unansweredQuestions =
+    currentQuestions.length -
+    answeredQuestions;
+
+  const unansweredQuestionIds =
+    currentQuestions
+      .filter(
+        (question) =>
+          !answers[question.id],
+      )
+      .map((question) => question.id);
+
+  useEffect(() => {
+    if (
+      currentPage !== "simulation" ||
+      isSubmitted ||
+      Object.keys(answers).length === 0
+    ) {
+      return;
+    }
+
+    const progress = {
+      answers,
+      currentQuestionIndex,
+      total: currentQuestions.length,
+      updatedAt: new Date().toISOString(),
+    };
+
+    setSimulationProgress(
+      (currentProgress) => {
+        const updatedProgress = {
+          ...currentProgress,
+          [currentSimulationId]:
+            progress,
+        };
+
+        localStorage.setItem(
+          PROGRESS_STORAGE_KEY,
+          JSON.stringify(
+            updatedProgress,
+          ),
+        );
+
+        return updatedProgress;
+      },
+    );
+  }, [
+    answers,
+    currentQuestionIndex,
+    currentPage,
+    currentSimulationId,
+    currentQuestions.length,
+    isSubmitted,
+  ]);
+
+  function handleStartSimulation(
+    simulationId,
+  ) {
+    const selectedSimulation =
+      simulations.find(
+        (simulation) =>
+          simulation.id === simulationId,
+      );
+
+    if (!selectedSimulation) {
+      return;
+    }
+
+    const completed =
+      completedSimulations[simulationId];
+
+    if (completed) {
+      handleReviewCompletedSimulation(
+        simulationId,
+      );
+      return;
+    }
+
+    const savedProgress =
+      simulationProgress[simulationId];
+
+    setCurrentSimulationId(
+      simulationId,
+    );
+
+    if (savedProgress) {
+      setAnswers(
+        savedProgress.answers ?? {},
+      );
+
+      setCurrentQuestionIndex(
+        savedProgress.currentQuestionIndex ??
+        0,
+      );
+    } else {
+      setAnswers({});
+      setCurrentQuestionIndex(0);
+    }
+
+    setIsSubmitted(false);
+    setIsReviewing(false);
+    setIsConfirmingSubmit(false);
+
+    setCurrentPage("simulation");
+  }
+
+  function handleReviewCompletedSimulation(
+    simulationId,
+  ) {
+    const selectedSimulation =
+      simulations.find(
+        (simulation) =>
+          simulation.id === simulationId,
+      );
+
+    const completed =
+      completedSimulations[simulationId];
+
+    if (
+      !selectedSimulation ||
+      !completed
+    ) {
+      return;
+    }
+
+    setCurrentSimulationId(
+      simulationId,
+    );
+
+    setAnswers(
+      completed.answers ?? {},
+    );
+
+    setCurrentQuestionIndex(0);
+    setIsSubmitted(true);
+    setIsReviewing(true);
+    setIsConfirmingSubmit(false);
+
+    setCurrentPage("simulation");
+  }
+
+  function handleSelectAnswer(answerId) {
+    if (!currentQuestion) {
+      return;
+    }
+
+    setAnswers((currentAnswers) => ({
+      ...currentAnswers,
+      [currentQuestion.id]:
+        answerId,
+    }));
+  }
+
+  function handleNextQuestion() {
+    if (
+      currentQuestionIndex <
+      currentQuestions.length - 1
+    ) {
+      setCurrentQuestionIndex(
+        (currentIndex) =>
+          currentIndex + 1,
+      );
+    }
+  }
+
+  function handlePreviousQuestion() {
+    if (currentQuestionIndex > 0) {
+      setCurrentQuestionIndex(
+        (currentIndex) =>
+          currentIndex - 1,
+      );
+    }
+  }
+
+  function handleGoToQuestionByIndex(
+    questionIndex,
+  ) {
+    if (
+      questionIndex >= 0 &&
+      questionIndex <
+      currentQuestions.length
+    ) {
+      setCurrentQuestionIndex(
+        questionIndex,
+      );
+    }
+  }
+
+  function handleOpenSubmitConfirmation() {
+    setIsConfirmingSubmit(true);
+  }
+
+  function handleCancelSubmit() {
+    setIsConfirmingSubmit(false);
+  }
+
+  function handleConfirmSubmit() {
+    const result = {
+      completed: true,
+      score,
+      total: currentQuestions.length,
+      answers,
+      completedAt:
+        new Date().toISOString(),
+    };
+
+    setCompletedSimulations(
+      (currentCompleted) => {
+        const updatedCompleted = {
+          ...currentCompleted,
+          [currentSimulationId]:
+            result,
+        };
+
+        localStorage.setItem(
+          COMPLETED_STORAGE_KEY,
+          JSON.stringify(
+            updatedCompleted,
+          ),
+        );
+
+        return updatedCompleted;
+      },
+    );
+
+    setSimulationProgress(
+      (currentProgress) => {
+        const updatedProgress = {
+          ...currentProgress,
+        };
+
+        delete updatedProgress[
+          currentSimulationId
+        ];
+
+        localStorage.setItem(
+          PROGRESS_STORAGE_KEY,
+          JSON.stringify(
+            updatedProgress,
+          ),
+        );
+
+        return updatedProgress;
+      },
+    );
+
+    setIsConfirmingSubmit(false);
+    setIsSubmitted(true);
+  }
+
+  function handleGoToUnansweredQuestion(
+    questionId,
+  ) {
+    const questionIndex =
+      currentQuestions.findIndex(
+        (question) =>
+          question.id === questionId,
+      );
+
+    if (questionIndex !== -1) {
+      setCurrentQuestionIndex(
+        questionIndex,
+      );
+
+      setIsConfirmingSubmit(false);
+    }
+  }
+
+  function handleReview() {
+    setIsReviewing(true);
+  }
+
+  function handleBackToResults() {
+    setIsReviewing(false);
+  }
+
+  function handleBackHome() {
+    setCurrentPage("home");
+    setIsSubmitted(false);
+    setIsReviewing(false);
+    setIsConfirmingSubmit(false);
+  }
+
+  if (currentPage === "home") {
+    return (
+      <HomePage
+        simulations={simulations}
+        completedSimulations={
+          completedSimulations
+        }
+        simulationProgress={
+          simulationProgress
+        }
+        onStartSimulation={
+          handleStartSimulation
+        }
+        onReviewSimulation={
+          handleReviewCompletedSimulation
+        }
+      />
+    );
+  }
+
+  if (isConfirmingSubmit) {
+    return (
+      <main className="quiz-page">
+        <div className="quiz-container">
+          <h1 className="quiz-title">
+            {currentSimulation.title}
+          </h1>
+
+          <section className="submit-confirmation">
+            <div className="submit-confirmation__header">
+              <p className="submit-confirmation__eyebrow">
+                Consegna
+              </p>
+
+              <h2>Conferma consegna</h2>
+
+              <p>
+                Controlla le domande mancanti
+                prima di consegnare definitivamente
+                la simulazione.
+              </p>
+            </div>
+
+            <div className="submit-confirmation__summary">
+              <div className="submit-stat">
+                <span className="submit-stat__value">
+                  {answeredQuestions}
+                </span>
+
+                <span className="submit-stat__label">
+                  Risposte date
+                </span>
+              </div>
+
+              <div className="submit-stat">
+                <span className="submit-stat__value">
+                  {unansweredQuestions}
+                </span>
+
+                <span className="submit-stat__label">
+                  Senza risposta
+                </span>
+              </div>
+
+              <div className="submit-stat">
+                <span className="submit-stat__value">
+                  {currentQuestions.length}
+                </span>
+
+                <span className="submit-stat__label">
+                  Domande totali
+                </span>
+              </div>
+            </div>
+
+            {unansweredQuestions > 0 ? (
+              <div className="submit-missing">
+                <div className="submit-missing__header">
+                  <div>
+                    <h3>
+                      Domande da completare
+                    </h3>
+
+                    <p>
+                      Hai ancora{" "}
+                      <strong>
+                        {unansweredQuestions}
+                      </strong>{" "}
+                      {unansweredQuestions === 1
+                        ? "domanda senza risposta."
+                        : "domande senza risposta."}
+                    </p>
+                  </div>
+
+                  <span className="submit-missing__badge">
+                    {unansweredQuestions} mancanti
+                  </span>
+                </div>
+
+                <div className="submit-missing__grid">
+                  {unansweredQuestionIds.map(
+                    (questionId) => (
+                      <button
+                        key={questionId}
+                        type="button"
+                        className="submit-missing__button"
+                        onClick={() =>
+                          handleGoToUnansweredQuestion(
+                            questionId,
+                          )
+                        }
+                        aria-label={`Vai alla domanda ${questionId}`}
+                      >
+                        {questionId}
+                      </button>
+                    ),
+                  )}
+                </div>
+
+                <p className="submit-missing__hint">
+                  Clicca su un numero per tornare
+                  direttamente alla domanda.
+                </p>
+              </div>
+            ) : (
+              <div className="submit-complete">
+                <span className="submit-complete__icon">
+                  ✓
+                </span>
+
+                <div>
+                  <strong>
+                    Hai risposto a tutte le domande
+                  </strong>
+
+                  <p>
+                    La simulazione è pronta per
+                    essere consegnata.
+                  </p>
+                </div>
+              </div>
+            )}
+
+            <div className="submit-warning">
+              <span className="submit-warning__icon">
+                !
+              </span>
+
+              <p>
+                <strong>
+                  La consegna è definitiva.
+                </strong>{" "}
+                Dopo aver confermato non potrai più
+                modificare le risposte, ma potrai
+                rivedere domande, soluzioni e
+                spiegazioni.
+              </p>
+            </div>
+
+            <div className="submit-confirmation__actions">
+              <button
+                type="button"
+                className="submit-confirmation__back"
+                onClick={handleCancelSubmit}
+              >
+                ← Torna alla simulazione
+              </button>
+
+              <button
+                type="button"
+                className="submit-confirmation__confirm"
+                onClick={handleConfirmSubmit}
+              >
+                Conferma consegna
+              </button>
+            </div>
+          </section>
+        </div>
+      </main>
+    );
+  }
+
+  if (isSubmitted && isReviewing) {
+    return (
+      <main className="quiz-page">
+        <div className="quiz-container">
+          <h1 className="quiz-title">
+            {currentSimulation.title}
+          </h1>
+
+          <AnswerReview
+            questions={
+              currentQuestions
+            }
+            userAnswers={answers}
+            onBackToResults={
+              handleBackToResults
+            }
+          />
+        </div>
+      </main>
+    );
+  }
+
+  if (isSubmitted) {
+    return (
+      <main className="quiz-page">
+        <div className="quiz-container">
+          <h1 className="quiz-title">
+            {currentSimulation.title}
+          </h1>
+
+          <ResultsSummary
+            score={score}
+            totalQuestions={
+              currentQuestions.length
+            }
+            answeredQuestions={
+              answeredQuestions
+            }
+            onReview={handleReview}
+            onBackHome={handleBackHome}
+          />
+        </div>
+      </main>
+    );
+  }
+
+  if (!currentQuestion) {
+    return (
+      <main>
+        <p>
+          Questa simulazione non contiene
+          ancora domande.
+        </p>
+
+        <button
+          type="button"
+          onClick={handleBackHome}
+        >
+          Torna alla home
+        </button>
+      </main>
+    );
+  }
+
+  return (
+    <main className="quiz-page">
+      <div className="quiz-container">
+        <h1 className="quiz-title">
+          {currentSimulation.title}
+        </h1>
+
+        <p className="quiz-progress">
+          Risposte date:{" "}
+          <strong>
+            {answeredQuestions} /{" "}
+            {currentQuestions.length}
+          </strong>
+        </p>
+
+        <QuestionNavigator
+          questions={currentQuestions}
+          currentQuestionIndex={
+            currentQuestionIndex
+          }
+          answers={answers}
+          onGoToQuestion={
+            handleGoToQuestionByIndex
+          }
+        />
+
+        <Question
+          question={currentQuestion}
+          selectedAnswer={
+            answers[currentQuestion.id] ??
+            null
+          }
+          onSelectAnswer={
+            handleSelectAnswer
+          }
+        />
+
+        <div className="quiz-actions">
+          <button
+            type="button"
+            onClick={
+              handlePreviousQuestion
+            }
+            disabled={
+              currentQuestionIndex === 0
+            }
+          >
+            ← Precedente
+          </button>
+
+          <button
+            type="button"
+            className="quiz-submit-button"
+            onClick={
+              handleOpenSubmitConfirmation
+            }
+          >
+            Consegna simulazione
+          </button>
+
+          <button
+            type="button"
+            onClick={handleNextQuestion}
+            disabled={
+              currentQuestionIndex ===
+              currentQuestions.length - 1
+            }
+          >
+            Successiva →
+          </button>
+        </div>
+      </div>
+    </main>
+  );
+}
+
+export default App;
