@@ -32,6 +32,20 @@ import logicaSerieAlfabetiche from "../content/study/linguistica-logica/logica-s
 
 import logicaSerieMiste from "../content/study/linguistica-logica/logica-serie-miste.md?raw";
 
+import logicaAnalogie from "../content/study/linguistica-logica/logica-analogie.md?raw";
+
+import logicaClassificazioni from "../content/study/linguistica-logica/logica-classificazioni.md?raw";
+
+import logicaElementoEstraneo from "../content/study/linguistica-logica/logica-elemento-estraneo.md?raw";
+
+import logicaRagionamentoConSimboli from "../content/study/linguistica-logica/logica-ragionamento-con-simboli.md?raw";
+
+import generiLetterariAnalisiTesto from "../content/study/letteratura/generi-letterari-e-analisi-del-testo.md?raw";
+
+import strutturaTestoNarrativo from "../content/study/letteratura/struttura-del-testo-narrativo.md?raw";
+
+import medioevoStilNovoDantePetrarcaBoccaccio from "../content/study/letteratura/medioevo-dolce-stil-novo-dante-petrarca-boccaccio.md?raw";
+
 const studyTopics = [
     {
         id: "comprensione-del-testo",
@@ -204,6 +218,76 @@ const studyTopics = [
         description:
             "Serie che combinano numeri, lettere, simboli o più regole contemporaneamente, con individuazione dello schema e completamento della successione.",
         content: logicaSerieMiste,
+    },
+    {
+        id: "logica-analogie",
+        area: "linguistica-logica",
+        areaTitle: "Competenza linguistica e logica",
+        number: 18,
+        title: "Logica — Analogie",
+        description:
+            "Riconoscimento di relazioni tra parole, concetti o elementi e individuazione del termine che completa correttamente un'analogia.",
+        content: logicaAnalogie,
+    },
+    {
+        id: "logica-classificazioni",
+        area: "linguistica-logica",
+        areaTitle: "Competenza linguistica e logica",
+        number: 19,
+        title: "Logica — Classificazioni",
+        description:
+            "Raggruppamento di elementi secondo caratteristiche comuni, individuazione dell'elemento estraneo e riconoscimento di criteri di classificazione.",
+        content: logicaClassificazioni,
+    },
+    {
+        id: "logica-elemento-estraneo",
+        area: "linguistica-logica",
+        areaTitle: "Competenza linguistica e logica",
+        number: 20,
+        title: "Logica — Elemento estraneo",
+        description:
+            "Individuazione dell'elemento che non appartiene a un insieme sulla base di caratteristiche, relazioni o criteri comuni.",
+        content: logicaElementoEstraneo,
+    },
+    {
+        id: "logica-ragionamento-con-simboli",
+        area: "linguistica-logica",
+        areaTitle: "Competenza linguistica e logica",
+        number: 21,
+        title: "Logica — Ragionamento con simboli",
+        description:
+            "Interpretazione di simboli, regole di sostituzione, relazioni tra segni e applicazione coerente di codici e trasformazioni logiche.",
+        content: logicaRagionamentoConSimboli,
+    },
+    {
+        id: "letteratura-generi-letterari-e-analisi-del-testo",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 22,
+        title: "Letteratura — Generi letterari e principali strumenti di analisi del testo letterario",
+        description:
+            "Generi letterari, caratteristiche dei testi narrativi, poetici e teatrali e principali strumenti per l'analisi del testo letterario.",
+        content: generiLetterariAnalisiTesto,
+    },
+    {
+        id: "letteratura-struttura-del-testo-narrativo",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 23,
+        title: "Letteratura — Struttura del testo narrativo",
+        description:
+            "Fabula e intreccio, sequenze narrative, narratore, focalizzazione, personaggi, tempo, spazio e struttura del racconto.",
+        content: strutturaTestoNarrativo,
+    },
+    {
+        id: "letteratura-medioevo-dolce-stil-novo-dante-petrarca-boccaccio",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 24,
+        title: "Letteratura — Medioevo: Dolce Stil Novo, Dante, Petrarca e Boccaccio",
+        description:
+            "Contesto culturale medievale, Dolce Stil Novo e studio dei principali autori e opere di Dante Alighieri, Francesco Petrarca e Giovanni Boccaccio.",
+        content: medioevoStilNovoDantePetrarcaBoccaccio,
     },
 ];
 
