@@ -6,6 +6,7 @@ function HomePage({
     simulationProgress,
     onStartSimulation,
     onReviewSimulation,
+    onOpenStudy,
 }) {
     return (
         <main className="home-page">
@@ -15,9 +16,41 @@ function HomePage({
                 </h1>
 
                 <p>
-                    Simulazioni del test di ammissione
+                    Preparazione e simulazioni del
+                    test di ammissione
                 </p>
             </header>
+
+            <section className="home-study-section">
+                <button
+                    type="button"
+                    className="home-study-card"
+                    onClick={onOpenStudy}
+                >
+                    <div className="home-study-card__icon">
+                        📚
+                    </div>
+
+                    <div className="home-study-card__content">
+                        <span>
+                            Preparazione teorica
+                        </span>
+
+                        <h2>Area studio</h2>
+
+                        <p>
+                            Studia gli argomenti del
+                            programma, ripassa la teoria
+                            e prepara le conoscenze
+                            necessarie per il test.
+                        </p>
+                    </div>
+
+                    <span className="home-study-card__arrow">
+                        →
+                    </span>
+                </button>
+            </section>
 
             <section className="simulations-section">
                 <h2>Scegli una simulazione</h2>
@@ -44,7 +77,8 @@ function HomePage({
                         const answeredCount =
                             progress
                                 ? Object.keys(
-                                    progress.answers ?? {},
+                                    progress.answers ??
+                                    {},
                                 ).length
                                 : 0;
 
@@ -68,8 +102,13 @@ function HomePage({
                                 className="simulation-card"
                             >
                                 <div className="simulation-card__status">
-                                    <span>{statusSymbol}</span>
-                                    <span>{statusText}</span>
+                                    <span>
+                                        {statusSymbol}
+                                    </span>
+
+                                    <span>
+                                        {statusText}
+                                    </span>
                                 </div>
 
                                 <h3>
@@ -81,8 +120,13 @@ function HomePage({
                                     <p>
                                         Punteggio:{" "}
                                         <strong>
-                                            {completed.score}/
-                                            {completed.total}
+                                            {
+                                                completed.score
+                                            }
+                                            /
+                                            {
+                                                completed.total
+                                            }
                                         </strong>
                                     </p>
                                 )}
@@ -91,8 +135,13 @@ function HomePage({
                                     <p>
                                         Risposte date:{" "}
                                         <strong>
-                                            {answeredCount}/
-                                            {progress.total}
+                                            {
+                                                answeredCount
+                                            }
+                                            /
+                                            {
+                                                progress.total
+                                            }
                                         </strong>
                                     </p>
                                 )}
@@ -100,7 +149,8 @@ function HomePage({
                                 {!isCompleted &&
                                     !isInProgress && (
                                         <p>
-                                            Non ancora iniziata
+                                            Non ancora
+                                            iniziata
                                         </p>
                                     )}
 

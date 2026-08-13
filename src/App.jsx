@@ -5,14 +5,19 @@ import QuestionNavigator from "./components/QuestionNavigator";
 import ResultsSummary from "./components/ResultsSummary";
 import AnswerReview from "./components/AnswerReview";
 
+import StudyPage from "./pages/StudyPage";
+import StudyTopicPage from "./pages/StudyTopicPage";
 import HomePage from "./pages/HomePage";
 
+import studyTopics from "./data/studyTopics";
 import simulations from "./data/simulations";
 
 import calculateScore from "./utils/calculateScore";
 
+import "./styles/study.css";
 import "./styles/quiz.css";
 import "./styles/review.css";
+
 const COMPLETED_STORAGE_KEY =
   "formazione-primaria-completed-simulations";
 
@@ -46,6 +51,11 @@ function App() {
     currentQuestionIndex,
     setCurrentQuestionIndex,
   ] = useState(0);
+
+  const [
+    currentStudyTopicId,
+    setCurrentStudyTopicId,
+  ] = useState(null);
 
   const [answers, setAnswers] =
     useState({});
@@ -87,6 +97,12 @@ function App() {
   const currentQuestion =
     currentQuestions[currentQuestionIndex];
 
+  const currentStudyTopic =
+    studyTopics.find(
+      (topic) =>
+        topic.id === currentStudyTopicId,
+    ) ?? null;
+
   const score = calculateScore(
     currentQuestions,
     answers,
@@ -127,8 +143,7 @@ function App() {
       (currentProgress) => {
         const updatedProgress = {
           ...currentProgress,
-          [currentSimulationId]:
-            progress,
+          [currentSimulationId]: progress,
         };
 
         localStorage.setItem(
@@ -170,6 +185,7 @@ function App() {
       handleReviewCompletedSimulation(
         simulationId,
       );
+
       return;
     }
 
@@ -199,6 +215,11 @@ function App() {
     setIsConfirmingSubmit(false);
 
     setCurrentPage("simulation");
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   }
 
   function handleReviewCompletedSimulation(
@@ -229,11 +250,17 @@ function App() {
     );
 
     setCurrentQuestionIndex(0);
+
     setIsSubmitted(true);
     setIsReviewing(true);
     setIsConfirmingSubmit(false);
 
     setCurrentPage("simulation");
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   }
 
   function handleSelectAnswer(answerId) {
@@ -243,8 +270,7 @@ function App() {
 
     setAnswers((currentAnswers) => ({
       ...currentAnswers,
-      [currentQuestion.id]:
-        answerId,
+      [currentQuestion.id]: answerId,
     }));
   }
 
@@ -257,6 +283,11 @@ function App() {
         (currentIndex) =>
           currentIndex + 1,
       );
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
     }
   }
 
@@ -266,6 +297,11 @@ function App() {
         (currentIndex) =>
           currentIndex - 1,
       );
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
     }
   }
 
@@ -280,11 +316,21 @@ function App() {
       setCurrentQuestionIndex(
         questionIndex,
       );
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
     }
   }
 
   function handleOpenSubmitConfirmation() {
     setIsConfirmingSubmit(true);
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   }
 
   function handleCancelSubmit() {
@@ -343,6 +389,11 @@ function App() {
 
     setIsConfirmingSubmit(false);
     setIsSubmitted(true);
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   }
 
   function handleGoToUnansweredQuestion(
@@ -360,23 +411,80 @@ function App() {
       );
 
       setIsConfirmingSubmit(false);
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
     }
   }
 
   function handleReview() {
     setIsReviewing(true);
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   }
 
   function handleBackToResults() {
     setIsReviewing(false);
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
+
+  /* AREA STUDIO */
+
+  function handleOpenStudy() {
+    setCurrentStudyTopicId(null);
+    setCurrentPage("study");
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
+
+  function handleOpenStudyTopic(topicId) {
+    setCurrentStudyTopicId(topicId);
+    setCurrentPage("study-topic");
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
+
+  function handleBackToStudy() {
+    setCurrentStudyTopicId(null);
+    setCurrentPage("study");
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   }
 
   function handleBackHome() {
     setCurrentPage("home");
+
+    setCurrentStudyTopicId(null);
+
     setIsSubmitted(false);
     setIsReviewing(false);
     setIsConfirmingSubmit(false);
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   }
+
+  /* HOME */
 
   if (currentPage === "home") {
     return (
@@ -394,9 +502,40 @@ function App() {
         onReviewSimulation={
           handleReviewCompletedSimulation
         }
+        onOpenStudy={handleOpenStudy}
       />
     );
   }
+
+  /* AREA STUDIO */
+
+  if (currentPage === "study") {
+    return (
+      <StudyPage
+        topics={studyTopics}
+        onOpenTopic={
+          handleOpenStudyTopic
+        }
+        onBackHome={handleBackHome}
+      />
+    );
+  }
+
+  /* SINGOLO ARGOMENTO DI STUDIO */
+
+  if (currentPage === "study-topic") {
+    return (
+      <StudyTopicPage
+        topic={currentStudyTopic}
+        onBackToStudy={
+          handleBackToStudy
+        }
+        onBackHome={handleBackHome}
+      />
+    );
+  }
+
+  /* CONFERMA CONSEGNA */
 
   if (isConfirmingSubmit) {
     return (
@@ -412,11 +551,14 @@ function App() {
                 Consegna
               </p>
 
-              <h2>Conferma consegna</h2>
+              <h2>
+                Conferma consegna
+              </h2>
 
               <p>
-                Controlla le domande mancanti
-                prima di consegnare definitivamente
+                Controlla le domande
+                mancanti prima di
+                consegnare definitivamente
                 la simulazione.
               </p>
             </div>
@@ -444,7 +586,9 @@ function App() {
 
               <div className="submit-stat">
                 <span className="submit-stat__value">
-                  {currentQuestions.length}
+                  {
+                    currentQuestions.length
+                  }
                 </span>
 
                 <span className="submit-stat__label">
@@ -458,22 +602,29 @@ function App() {
                 <div className="submit-missing__header">
                   <div>
                     <h3>
-                      Domande da completare
+                      Domande da
+                      completare
                     </h3>
 
                     <p>
                       Hai ancora{" "}
                       <strong>
-                        {unansweredQuestions}
+                        {
+                          unansweredQuestions
+                        }
                       </strong>{" "}
-                      {unansweredQuestions === 1
+                      {unansweredQuestions ===
+                        1
                         ? "domanda senza risposta."
                         : "domande senza risposta."}
                     </p>
                   </div>
 
                   <span className="submit-missing__badge">
-                    {unansweredQuestions} mancanti
+                    {
+                      unansweredQuestions
+                    }{" "}
+                    mancanti
                   </span>
                 </div>
 
@@ -481,7 +632,9 @@ function App() {
                   {unansweredQuestionIds.map(
                     (questionId) => (
                       <button
-                        key={questionId}
+                        key={
+                          questionId
+                        }
                         type="button"
                         className="submit-missing__button"
                         onClick={() =>
@@ -498,8 +651,9 @@ function App() {
                 </div>
 
                 <p className="submit-missing__hint">
-                  Clicca su un numero per tornare
-                  direttamente alla domanda.
+                  Clicca su un numero per
+                  tornare direttamente alla
+                  domanda.
                 </p>
               </div>
             ) : (
@@ -510,12 +664,14 @@ function App() {
 
                 <div>
                   <strong>
-                    Hai risposto a tutte le domande
+                    Hai risposto a tutte
+                    le domande
                   </strong>
 
                   <p>
-                    La simulazione è pronta per
-                    essere consegnata.
+                    La simulazione è
+                    pronta per essere
+                    consegnata.
                   </p>
                 </div>
               </div>
@@ -528,12 +684,14 @@ function App() {
 
               <p>
                 <strong>
-                  La consegna è definitiva.
+                  La consegna è
+                  definitiva.
                 </strong>{" "}
-                Dopo aver confermato non potrai più
-                modificare le risposte, ma potrai
-                rivedere domande, soluzioni e
-                spiegazioni.
+                Dopo aver confermato non
+                potrai più modificare le
+                risposte, ma potrai
+                rivedere domande,
+                soluzioni e spiegazioni.
               </p>
             </div>
 
@@ -541,7 +699,9 @@ function App() {
               <button
                 type="button"
                 className="submit-confirmation__back"
-                onClick={handleCancelSubmit}
+                onClick={
+                  handleCancelSubmit
+                }
               >
                 ← Torna alla simulazione
               </button>
@@ -549,7 +709,9 @@ function App() {
               <button
                 type="button"
                 className="submit-confirmation__confirm"
-                onClick={handleConfirmSubmit}
+                onClick={
+                  handleConfirmSubmit
+                }
               >
                 Conferma consegna
               </button>
@@ -560,7 +722,12 @@ function App() {
     );
   }
 
-  if (isSubmitted && isReviewing) {
+  /* REVISIONE RISPOSTE */
+
+  if (
+    isSubmitted &&
+    isReviewing
+  ) {
     return (
       <main className="quiz-page">
         <div className="quiz-container">
@@ -582,6 +749,8 @@ function App() {
     );
   }
 
+  /* RISULTATI */
+
   if (isSubmitted) {
     return (
       <main className="quiz-page">
@@ -599,30 +768,40 @@ function App() {
               answeredQuestions
             }
             onReview={handleReview}
-            onBackHome={handleBackHome}
+            onBackHome={
+              handleBackHome
+            }
           />
         </div>
       </main>
     );
   }
 
+  /* NESSUNA DOMANDA */
+
   if (!currentQuestion) {
     return (
-      <main>
-        <p>
-          Questa simulazione non contiene
-          ancora domande.
-        </p>
+      <main className="quiz-page">
+        <div className="quiz-container">
+          <p>
+            Questa simulazione non
+            contiene ancora domande.
+          </p>
 
-        <button
-          type="button"
-          onClick={handleBackHome}
-        >
-          Torna alla home
-        </button>
+          <button
+            type="button"
+            onClick={
+              handleBackHome
+            }
+          >
+            Torna alla home
+          </button>
+        </div>
       </main>
     );
   }
+
+  /* SIMULAZIONE */
 
   return (
     <main className="quiz-page">
@@ -653,8 +832,9 @@ function App() {
         <Question
           question={currentQuestion}
           selectedAnswer={
-            answers[currentQuestion.id] ??
-            null
+            answers[
+            currentQuestion.id
+            ] ?? null
           }
           onSelectAnswer={
             handleSelectAnswer
@@ -686,7 +866,9 @@ function App() {
 
           <button
             type="button"
-            onClick={handleNextQuestion}
+            onClick={
+              handleNextQuestion
+            }
             disabled={
               currentQuestionIndex ===
               currentQuestions.length - 1
