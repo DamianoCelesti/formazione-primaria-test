@@ -46,6 +46,16 @@ import strutturaTestoNarrativo from "../content/study/letteratura/struttura-del-
 
 import medioevoStilNovoDantePetrarcaBoccaccio from "../content/study/letteratura/medioevo-dolce-stil-novo-dante-petrarca-boccaccio.md?raw";
 
+import medioevoParte2PetrarcaBoccaccio from "../content/study/letteratura/medioevo-parte-2-petrarca-boccaccio.md?raw";
+
+import umanesimoRinascimentoSeicento from "../content/study/letteratura/umanesimo-rinascimento-seicento-ariosto-machiavelli-tasso-marino-galileo.md?raw";
+
+import umanesimoRinascimentoSeicentoParte2 from "../content/study/letteratura/umanesimo-rinascimento-seicento-parte-2-barocco-marino-galileo.md?raw";
+
+import settecentoIlluminismo from "../content/study/letteratura/settecento-illuminismo-goldoni-parini-alfieri.md?raw";
+
+import ottocentoRomanticismo from "../content/study/letteratura/ottocento-romanticismo-foscolo-manzoni-leopardi.md?raw";
+
 const studyTopics = [
     {
         id: "comprensione-del-testo",
@@ -288,6 +298,56 @@ const studyTopics = [
         description:
             "Contesto culturale medievale, Dolce Stil Novo e studio dei principali autori e opere di Dante Alighieri, Francesco Petrarca e Giovanni Boccaccio.",
         content: medioevoStilNovoDantePetrarcaBoccaccio,
+    },
+    {
+        id: "letteratura-medioevo-parte-2-petrarca-boccaccio",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 25,
+        title: "Letteratura — Medioevo — Parte 2 di 2: Francesco Petrarca e Giovanni Boccaccio",
+        description:
+            "Francesco Petrarca e Giovanni Boccaccio: contesto storico-culturale, poetica, opere principali, temi fondamentali e caratteristiche dello stile.",
+        content: medioevoParte2PetrarcaBoccaccio,
+    },
+    {
+        id: "letteratura-umanesimo-rinascimento-seicento",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 26,
+        title: "Letteratura — Umanesimo, Rinascimento e Seicento: Ariosto, Machiavelli, Tasso, Marino e Galileo",
+        description:
+            "Umanesimo, Rinascimento e Seicento: contesto storico-culturale, opere, poetica e temi principali di Ariosto, Machiavelli, Tasso, Marino e Galileo.",
+        content: umanesimoRinascimentoSeicento,
+    },
+    {
+        id: "letteratura-umanesimo-rinascimento-seicento-parte-2",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 27,
+        title: "Letteratura — Umanesimo, Rinascimento e Seicento — Parte 2 di 2: Barocco, Giambattista Marino e Galileo Galilei",
+        description:
+            "Barocco e Seicento: caratteristiche culturali e letterarie, poetica e opere di Giambattista Marino e contributo scientifico e letterario di Galileo Galilei.",
+        content: umanesimoRinascimentoSeicentoParte2,
+    },
+    {
+        id: "letteratura-settecento-illuminismo",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 28,
+        title: "Letteratura — Settecento e Illuminismo: Goldoni, Parini e Alfieri",
+        description:
+            "Settecento e Illuminismo: contesto storico-culturale, riforma del teatro di Goldoni, poesia civile di Parini e tragedia di Alfieri.",
+        content: settecentoIlluminismo,
+    },
+    {
+        id: "letteratura-ottocento-romanticismo",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 29,
+        title: "Letteratura — Ottocento e Romanticismo: Foscolo, Manzoni e Leopardi",
+        description:
+            "Ottocento e Romanticismo: contesto storico-culturale, poetica, opere e temi principali di Ugo Foscolo, Alessandro Manzoni e Giacomo Leopardi.",
+        content: ottocentoRomanticismo,
     },
 ];
 
