@@ -56,6 +56,20 @@ import settecentoIlluminismo from "../content/study/letteratura/settecento-illum
 
 import ottocentoRomanticismo from "../content/study/letteratura/ottocento-romanticismo-foscolo-manzoni-leopardi.md?raw";
 
+import ottocentoRomanticismoParte2 from "../content/study/letteratura/ottocento-romanticismo-parte-2-leopardi-canti-operette-morali.md?raw";
+
+import verismoDecadentismo from "../content/study/letteratura/verismo-decadentismo-verga-pascoli-dannunzio.md?raw";
+
+import verismoDecadentismoParte2 from "../content/study/letteratura/verismo-decadentismo-parte-2-pascoli-dannunzio.md?raw";
+
+import novecentoSecondoNovecento from "../content/study/letteratura/novecento-secondo-novecento-autori-principali.md?raw";
+
+import novecentoParte2 from "../content/study/letteratura/novecento-secondo-novecento-parte-2-ungaretti-montale-saba-quasimodo.md?raw";
+
+import novecentoParte3 from "../content/study/letteratura/novecento-secondo-novecento-parte-3-levi-calvino-pavese-fenoglio-moravia.md?raw";
+
+import fontiStoricheCronologia from "../content/study/storia/fonti-storiche-e-cronologia.md?raw";
+
 const studyTopics = [
     {
         id: "comprensione-del-testo",
@@ -348,6 +362,76 @@ const studyTopics = [
         description:
             "Ottocento e Romanticismo: contesto storico-culturale, poetica, opere e temi principali di Ugo Foscolo, Alessandro Manzoni e Giacomo Leopardi.",
         content: ottocentoRomanticismo,
+    },
+    {
+        id: "letteratura-ottocento-romanticismo-parte-2",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 30,
+        title: "Letteratura — Ottocento e Romanticismo — Parte 2 di 2: Giacomo Leopardi, Canti e Operette morali",
+        description:
+            "Giacomo Leopardi: poetica, pensiero, Canti, Operette morali, temi principali e opere fondamentali.",
+        content: ottocentoRomanticismoParte2,
+    },
+    {
+        id: "letteratura-verismo-decadentismo",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 31,
+        title: "Letteratura — Verismo e Decadentismo: Giovanni Verga, Giovanni Pascoli e Gabriele D’Annunzio",
+        description:
+            "Verismo e Decadentismo: contesto storico-culturale, poetica, opere e temi principali di Giovanni Verga, Giovanni Pascoli e Gabriele D’Annunzio.",
+        content: verismoDecadentismo,
+    },
+    {
+        id: "letteratura-verismo-decadentismo-parte-2",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 32,
+        title: "Letteratura — Verismo e Decadentismo — Parte 2 di 2: Decadentismo, Giovanni Pascoli e Gabriele D’Annunzio",
+        description:
+            "Decadentismo italiano: poetica, temi, opere principali e caratteristiche di Giovanni Pascoli e Gabriele D’Annunzio.",
+        content: verismoDecadentismoParte2,
+    },
+    {
+        id: "letteratura-novecento-secondo-novecento",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 33,
+        title: "Letteratura — Novecento e secondo Novecento: Pirandello, Svevo, Ungaretti, Montale, Saba, Quasimodo, Primo Levi, Calvino, Pavese, Fenoglio e Moravia",
+        description:
+            "Novecento e secondo Novecento: principali correnti, temi, opere e caratteristiche degli autori più importanti della letteratura italiana del periodo.",
+        content: novecentoSecondoNovecento,
+    },
+    {
+        id: "letteratura-novecento-secondo-novecento-parte-2",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 34,
+        title: "Letteratura — Novecento e secondo Novecento — Parte 2 di 3: Ungaretti, Montale, Saba e Quasimodo",
+        description:
+            "Poesia del Novecento: poetica, temi, opere principali e caratteristiche di Giuseppe Ungaretti, Eugenio Montale, Umberto Saba e Salvatore Quasimodo.",
+        content: novecentoParte2,
+    },
+    {
+        id: "letteratura-novecento-secondo-novecento-parte-3",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 35,
+        title: "Letteratura — Novecento e secondo Novecento — Parte 3 di 3: Primo Levi, Italo Calvino, Cesare Pavese, Beppe Fenoglio e Alberto Moravia",
+        description:
+            "Narrativa del Novecento e del secondo Novecento: temi, opere principali e caratteristiche di Primo Levi, Italo Calvino, Cesare Pavese, Beppe Fenoglio e Alberto Moravia.",
+        content: novecentoParte3,
+    },
+    {
+        id: "storia-fonti-storiche-e-cronologia",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 36,
+        title: "Storia — Fonti storiche e cronologia",
+        description:
+            "Tipi di fonti storiche, loro utilizzo e interpretazione, cronologia, periodizzazione e collocazione degli eventi nel tempo.",
+        content: fontiStoricheCronologia,
     },
 ];
 
