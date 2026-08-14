@@ -86,6 +86,8 @@ Esiste quindi un continuo collegamento tra:
 
 > formazione dei rilievi → erosione → trasporto → sedimentazione.
 
+![](resources/geografia/carta-fisica.png)
+
 ---
 
 # 2. Teoria
@@ -316,6 +318,8 @@ L’Himalaya deriva dalla collisione tra:
 
 - placca indiana;
 - placca eurasiatica.
+
+![](resources/geografia/hima.png)
 
 ---
 
@@ -573,6 +577,8 @@ Un importante esempio è:
 È stata formata in larga parte:
 
 > dall’accumulo di sedimenti trasportati dal Po e dai suoi affluenti, insieme a materiali provenienti da Alpi e Appennini.
+
+![](resources/geografia/padana.png)
 
 ---
 
@@ -1346,12 +1352,15 @@ Il:
 
 presenta un famoso delta.
 
+![](resources/geografia/nilo.png)
+
 Anche il:
 
 > **Po**
 
 ha una foce a delta.
 
+![](resources/geografia/po.png)
 ---
 
 # 2.115 Foce a estuario
@@ -1380,6 +1389,8 @@ sfocia attraverso:
 
 > un estuario.
 
+![](resources/geografia/tamigi.png)
+
 ---
 
 ## 2.118 Delta ≠ estuario
@@ -1391,6 +1402,10 @@ sfocia attraverso:
 ### Estuario
 
 → imboccatura ampia generalmente a unico canale principale.
+
+
+
+![](resources/geografia/fiumi.png)
 
 ---
 
@@ -1510,6 +1525,8 @@ Un:
 
 > una depressione della superficie terrestre.
 
+
+![](resources/geografia/laghi.png)
 ---
 
 ## 2.130 Acqua
@@ -1805,6 +1822,8 @@ Un mare può essere:
 - interno;
 - quasi chiuso.
 
+
+![](resources/geografia/oceani.png)
 ---
 
 ## 2.159 Mediterraneo
@@ -1820,6 +1839,8 @@ Il:
 Comunica con l’Atlantico attraverso:
 
 > lo Stretto di Gibilterra.
+
+![](resources/geografia/gibilterra.png)
 
 ---
 

@@ -35,6 +35,8 @@ Le due grandi strutture montuose italiane sono:
 - **Alpi**;
 - **Appennini**.
 
+![](resources/geografia/appennini.png)
+
 La principale pianura è:
 
 > **la Pianura Padana**.
@@ -82,6 +84,9 @@ I confini orientali dell’Europa vengono generalmente individuati attraverso:
 - Mar Nero;
 - stretti del Bosforo e dei Dardanelli.
 
+![](resources/geografia/fiumi-eu.png)
+![](resources/geografia/monti-eu.png)
+![](resources/geografia/laghi-eu.png)
 ---
 
 ## 1.2 Confini naturali sugli altri lati
@@ -181,6 +186,9 @@ Sono:
 
 > Stati sovrani indipendenti.
 
+
+![](resources/geografia/regioni.png)
+
 ---
 
 # 2.8 Superficie fisica dell’Italia
@@ -248,6 +256,9 @@ Interessano anche territori di:
 - Liechtenstein;
 - Monaco.
 
+
+
+![](resources/geografia/stati-eu.png)
 ---
 
 # 2.14 Origine delle Alpi

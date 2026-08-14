@@ -113,6 +113,27 @@ function StudyTopicPage({
         });
     }
 
+    function getImageSrc(src) {
+        if (!src) {
+            return "";
+        }
+
+        if (
+            src.startsWith("http://") ||
+            src.startsWith("https://") ||
+            src.startsWith("data:") ||
+            src.startsWith("blob:")
+        ) {
+            return src;
+        }
+
+        const cleanSrc = src
+            .replace(/^\/+/, "")
+            .replace(/^\.\//, "");
+
+        return `${import.meta.env.BASE_URL}${cleanSrc}`;
+    }
+
     return (
         <main className="study-page">
             <div className="study-container study-container--article">
@@ -157,6 +178,25 @@ function StudyTopicPage({
                                 remarkPlugins={[
                                     remarkGfm,
                                 ]}
+                                components={{
+                                    img: ({
+                                        src,
+                                        alt,
+                                        ...props
+                                    }) => (
+                                        <img
+                                            src={getImageSrc(
+                                                src,
+                                            )}
+                                            alt={
+                                                alt ||
+                                                ""
+                                            }
+                                            loading="lazy"
+                                            {...props}
+                                        />
+                                    ),
+                                }}
                             >
                                 {content}
                             </ReactMarkdown>

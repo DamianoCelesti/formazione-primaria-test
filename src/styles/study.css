@@ -500,3 +500,28 @@
         min-width: 550px;
     }
 }
+
+.study-article img {
+    display: block;
+
+    width: auto;
+    max-width: min(100%, 850px);
+
+    max-height: 650px;
+    height: auto;
+
+    object-fit: contain;
+
+    margin: 32px auto;
+
+    border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+    .study-article img {
+        max-width: 100%;
+        max-height: 500px;
+
+        margin: 24px auto;
+    }
+}

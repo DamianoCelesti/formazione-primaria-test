@@ -32,6 +32,8 @@ Per comprendere questi argomenti bisogna quindi collegare:
 
 > forma della Terra + orientamento + coordinate + rotazione terrestre + tempo.
 
+![Planisfero dei principali fusi orari](resources/geografia/fuso-orario.png)
+
 ---
 
 # 1. Introduzione
@@ -71,6 +73,7 @@ La longitudine attraverso:
 
 > i meridiani.
 
+![](resources/geografia/latitudine-longitudine.png)
 ---
 
 # 2. Teoria
@@ -231,6 +234,8 @@ rappresenta graficamente:
 
 > le direzioni cardinali e intermedie.
 
+
+![](resources/geografia/rosa-dei-venti.png)
 ---
 
 ## 2.13 Rosa dei venti tradizionale

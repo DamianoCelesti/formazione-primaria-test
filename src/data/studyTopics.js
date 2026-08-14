@@ -132,6 +132,10 @@ import geografiaAntropicaSociale from "../content/study/geografia/geografia-antr
 
 import geografiaEconomica from "../content/study/geografia/geografia-economica.md?url&no-inline";
 
+import numeriQuattroOperazioni from "../content/study/matematica/numeri-quattro-operazioni.md?url&no-inline";
+
+import divisibilitaNumeriPrimi from "../content/study/matematica/divisibilita-numeri-primi.md?url&no-inline";
+
 const studyTopics = [
     {
         id: "comprensione-del-testo",
@@ -804,6 +808,26 @@ const studyTopics = [
         description:
             "Principali concetti della geografia economica: settori primario, secondario e terziario, agricoltura, industria e servizi, commercio e trasporti, globalizzazione, fonti e risorse energetiche, sviluppo economico e sostenibilità.",
         content: geografiaEconomica,
+    },
+    {
+        id: "matematica-numeri-quattro-operazioni",
+        area: "cultura-matematico-scientifica",
+        areaTitle: "Cultura matematico-scientifica",
+        number: 68,
+        title: "Matematica — Numeri e quattro operazioni: numeri naturali, interi, razionali e reali, valore posizionale, confronto, operazioni, proprietà, precedenze e calcolo con numeri positivi e negativi",
+        description:
+            "Insiemi numerici naturali, interi, razionali e reali, sistema posizionale, confronto e ordinamento dei numeri, quattro operazioni e loro proprietà, priorità delle operazioni e calcolo con numeri positivi e negativi.",
+        content: numeriQuattroOperazioni,
+    },
+    {
+        id: "matematica-divisibilita-numeri-primi",
+        area: "cultura-matematico-scientifica",
+        areaTitle: "Cultura matematico-scientifica",
+        number: 69,
+        title: "Matematica — Divisibilità e numeri primi: multipli, divisori, criteri di divisibilità, numeri primi e composti, scomposizione in fattori primi, massimo comune divisore e minimo comune multiplo",
+        description:
+            "Multipli e divisori, principali criteri di divisibilità, numeri primi e composti, scomposizione in fattori primi e procedure per determinare massimo comune divisore e minimo comune multiplo.",
+        content: divisibilitaNumeriPrimi,
     },
 ];
 
