@@ -1858,17 +1858,7 @@ const simulation01 = [
                     "«Pessimismo storico» e «pessimismo cosmico» sono categorie utilizzate per descrivere sviluppi del pensiero leopardiano, non il passaggio tra due generi letterari. Leopardi continuò inoltre a praticare forme poetiche e prosastiche molto diverse senza trasformarsi in narratore realista nel senso verista del termine.",
             },
         ],
-        resources: [
-            {
-                id: "leopardi-evoluzione-pensiero",
-                type: "diagram",
-                label: "Schema dell'evoluzione del pensiero leopardiano",
-                src: `${import.meta.env.BASE_URL}resources/diagrams/leopardi-evoluzione-pensiero.png`,
-                alt: "Schema concettuale dal pessimismo storico al pessimismo cosmico con ruolo di natura, ragione e illusioni",
-                caption:
-                    "Lo schema mette a confronto il diverso ruolo attribuito a natura, civiltà, ragione e illusioni nelle principali fasi tradizionalmente individuate nel pensiero leopardiano.",
-            },
-        ],
+
     },
 
     {
@@ -2738,17 +2728,7 @@ const simulation01 = [
                     "78 cm² corrisponderebbero, con un lato di 5 cm, a un secondo lato di 15,6 cm, che sarebbe addirittura maggiore della diagonale. In un rettangolo la diagonale è sempre più lunga di ciascun singolo lato.",
             },
         ],
-        resources: [
-            {
-                id: "rettangolo-diagonale-pitagora",
-                type: "diagram",
-                label: "Rettangolo con diagonale e triangolo rettangolo",
-                src: `${import.meta.env.BASE_URL}resources/diagrams/rettangolo-diagonale-pitagora.png`,
-                alt: "Rettangolo con lato di 5 centimetri, diagonale di 13 centimetri e secondo lato incognito",
-                caption:
-                    "La diagonale divide il rettangolo in due triangoli rettangoli e permette di applicare il teorema di Pitagora.",
-            },
-        ],
+
     },
 
     {
@@ -3022,17 +3002,7 @@ const simulation01 = [
                     "L'osmosi avviene attraverso membrane semipermeabili sia nelle cellule animali sia in quelle vegetali. Nelle cellule vegetali la parete cellulare modifica gli effetti macroscopici dell'ingresso d'acqua, ma non elimina il fenomeno.",
             },
         ],
-        resources: [
-            {
-                id: "osmosi-soluzioni-tonicita",
-                type: "diagram",
-                label: "Osmosi in soluzioni ipotoniche, isotoniche e ipertoniche",
-                src: `${import.meta.env.BASE_URL}resources/diagrams/osmosi-tonicita-cellula.png`,
-                alt: "Confronto schematico del movimento dell'acqua in una cellula animale immersa in soluzioni ipotonica, isotonica e ipertonica",
-                caption:
-                    "Il diagramma evidenzia la direzione del movimento dell'acqua e la variazione di volume cellulare nei tre casi.",
-            },
-        ],
+
     },
 
     {
@@ -3072,17 +3042,7 @@ const simulation01 = [
                     "Una probabilità del 75% per il fenotipo dominante compare nell'incrocio Aa×Aa, dove AA e Aa rappresentano tre combinazioni su quattro. Nell'incrocio Aa×aa le due classi fenotipiche hanno invece la stessa probabilità.",
             },
         ],
-        resources: [
-            {
-                id: "punnett-aa-aa-recessivo",
-                type: "diagram",
-                label: "Quadrato di Punnett per l'incrocio Aa × aa",
-                src: `${import.meta.env.BASE_URL}resources/diagrams/punnett-Aa-aa.png`,
-                alt: "Quadrato di Punnett che mostra l'incrocio tra un individuo Aa e un individuo aa",
-                caption:
-                    "Il quadrato mostra che metà della progenie attesa è Aa e metà aa.",
-            },
-        ],
+
     },
 
     {
@@ -3278,17 +3238,7 @@ const simulation01 = [
                     "In un collegamento parallelo la resistenza equivalente deve essere minore della resistenza più piccola del circuito, che qui è 3 Ω. Un valore esattamente uguale a 3 Ω non soddisfa quindi questa proprietà.",
             },
         ],
-        resources: [
-            {
-                id: "resistenze-parallelo",
-                type: "diagram",
-                label: "Circuito con due resistori in parallelo",
-                src: `${import.meta.env.BASE_URL}resources/diagrams/resistenze-6-3-parallelo.png`,
-                alt: "Schema elettrico con un resistore da 6 ohm e uno da 3 ohm collegati in parallelo",
-                caption:
-                    "Il diagramma mostra che entrambi i resistori sono collegati agli stessi due nodi, caratteristica del collegamento in parallelo.",
-            },
-        ],
+
     },
 
     {
@@ -3428,17 +3378,7 @@ const simulation01 = [
                     "Le fasi lunari dipendono dalle diverse configurazioni geometriche tra Sole, Terra e Luna e non determinano le stagioni. Il loro ciclo dura inoltre circa un mese, mentre quello stagionale segue l'anno terrestre.",
             },
         ],
-        resources: [
-            {
-                id: "stagioni-inclinazione-asse",
-                type: "diagram",
-                label: "Inclinazione dell'asse terrestre e stagioni",
-                src: `${import.meta.env.BASE_URL}resources/diagrams/stagioni-inclinazione-asse-terrestre.png`,
-                alt: "Schema della Terra in quattro posizioni dell'orbita con asse inclinato e stagioni opposte nei due emisferi",
-                caption:
-                    "Il diagramma mostra come l'inclinazione dell'asse modifichi durante l'anno l'angolo dei raggi solari e la durata del giorno nei due emisferi.",
-            },
-        ],
+
     },
 ];
 
