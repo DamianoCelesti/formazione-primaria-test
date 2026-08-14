@@ -82,6 +82,24 @@ import inizioEtaModernaParte2 from "../content/study/storia/inizio-eta-moderna-p
 
 import inizioEtaModernaParte3 from "../content/study/storia/inizio-eta-moderna-parte-3-rivoluzione-scientifica-guerre-religione-assolutismo.md?raw";
 
+import illuminismoRivoluzioni from "../content/study/storia/illuminismo-rivoluzioni-americana-francese-napoleone-congresso-vienna.md?raw";
+
+import illuminismoRivoluzioniParte2 from "../content/study/storia/illuminismo-rivoluzioni-parte-2-rivoluzione-francese.md?raw";
+
+import illuminismoRivoluzioniParte3 from "../content/study/storia/illuminismo-rivoluzioni-parte-3-napoleone-congresso-vienna.md?raw";
+
+import risorgimentoUnitaItalia from "../content/study/storia/risorgimento-unita-italia.md?raw";
+
+import risorgimentoUnitaItaliaParte2 from "../content/study/storia/risorgimento-unita-italia-parte-2.md?raw";
+
+import risorgimentoUnitaItaliaParte3 from "../content/study/storia/risorgimento-unita-italia-parte-3.md?raw";
+
+import rivoluzioniIndustrialiImperialismo from "../content/study/storia/rivoluzioni-industriali-imperialismo.md?raw";
+
+import rivoluzioniIndustrialiImperialismoParte2 from "../content/study/storia/rivoluzioni-industriali-imperialismo-parte-2.md?raw";
+
+import rivoluzioniIndustrialiImperialismoParte3 from "../content/study/storia/rivoluzioni-industriali-imperialismo-parte-3.md?raw";
+
 const studyTopics = [
     {
         id: "comprensione-del-testo",
@@ -504,6 +522,96 @@ const studyTopics = [
         description:
             "Rivoluzione scientifica, principali guerre di religione europee, guerra dei Trent’anni, pace di Westfalia e sviluppo dell’assolutismo monarchico.",
         content: inizioEtaModernaParte3,
+    },
+    {
+        id: "storia-illuminismo-rivoluzioni",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 43,
+        title: "Storia — Illuminismo e rivoluzioni: Illuminismo, Rivoluzione americana, Rivoluzione francese, Napoleone e Congresso di Vienna",
+        description:
+            "Illuminismo, Rivoluzione americana, Rivoluzione francese, età napoleonica e Congresso di Vienna con i principali eventi, protagonisti e conseguenze politiche e sociali.",
+        content: illuminismoRivoluzioni,
+    },
+    {
+        id: "storia-illuminismo-rivoluzioni-parte-2",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 44,
+        title: "Storia — Illuminismo e rivoluzioni — Parte 2 di 3: Rivoluzione francese, dalla crisi dell’Antico Regime alla Repubblica, al Terrore e al Direttorio",
+        description:
+            "Crisi dell’Antico Regime, convocazione degli Stati Generali, nascita dell’Assemblea nazionale, abolizione dei privilegi, Repubblica, Terrore e Direttorio.",
+        content: illuminismoRivoluzioniParte2,
+    },
+    {
+        id: "storia-illuminismo-rivoluzioni-parte-3",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 45,
+        title: "Storia — Illuminismo e rivoluzioni — Parte 3 di 3: Napoleone Bonaparte, Impero napoleonico, caduta di Napoleone e Congresso di Vienna",
+        description:
+            "Ascesa di Napoleone Bonaparte, Impero napoleonico, principali campagne e riforme, caduta di Napoleone, Restaurazione e Congresso di Vienna.",
+        content: illuminismoRivoluzioniParte3,
+    },
+    {
+        id: "storia-risorgimento-unita-italia",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 46,
+        title: "Storia — Risorgimento e Unità d’Italia",
+        description:
+            "Risorgimento italiano, moti rivoluzionari, guerre d’indipendenza, ruolo di Mazzini, Cavour e Garibaldi, spedizione dei Mille e proclamazione del Regno d’Italia.",
+        content: risorgimentoUnitaItalia,
+    },
+    {
+        id: "storia-risorgimento-unita-italia-parte-2",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 47,
+        title: "Storia — Risorgimento e Unità d’Italia — Parte 2 di 3: rivoluzioni del 1848, Statuto Albertino, Prima guerra d’indipendenza, Repubblica Romana e ascesa di Cavour",
+        description:
+            "Rivoluzioni del 1848, Statuto Albertino, Prima guerra d’indipendenza, Repubblica Romana e affermazione politica di Cavour nel processo risorgimentale.",
+        content: risorgimentoUnitaItaliaParte2,
+    },
+    {
+        id: "storia-risorgimento-unita-italia-parte-3",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 48,
+        title: "Storia — Risorgimento e Unità d’Italia — Parte 3 di 3: guerra di Crimea, accordi di Plombières, Seconda guerra d’indipendenza, spedizione dei Mille, nascita del Regno d’Italia, Terza guerra d’indipendenza e conquista di Roma",
+        description:
+            "Guerra di Crimea, accordi di Plombières, Seconda guerra d’indipendenza, spedizione dei Mille, proclamazione del Regno d’Italia, Terza guerra d’indipendenza e conquista di Roma.",
+        content: risorgimentoUnitaItaliaParte3,
+    },
+    {
+        id: "storia-rivoluzioni-industriali-imperialismo",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 49,
+        title: "Storia — Rivoluzioni industriali e imperialismo",
+        description:
+            "Prima e seconda rivoluzione industriale, trasformazioni economiche e sociali, sviluppo del capitalismo, urbanizzazione, colonialismo e imperialismo tra Ottocento e inizio Novecento.",
+        content: rivoluzioniIndustrialiImperialismo,
+    },
+    {
+        id: "storia-rivoluzioni-industriali-imperialismo-parte-2",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 50,
+        title: "Storia — Rivoluzioni industriali e imperialismo — Parte 2 di 3: Seconda rivoluzione industriale, società di massa, movimento operaio, socialismo, Marx e trasformazioni dell’Ottocento",
+        description:
+            "Seconda rivoluzione industriale, nuove tecnologie e settori produttivi, nascita della società di massa, movimento operaio, socialismo, pensiero di Karl Marx e principali trasformazioni economiche e sociali dell’Ottocento.",
+        content: rivoluzioniIndustrialiImperialismoParte2,
+    },
+    {
+        id: "storia-rivoluzioni-industriali-imperialismo-parte-3",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 51,
+        title: "Storia — Rivoluzioni industriali e imperialismo — Parte 3 di 3: imperialismo, colonialismo, spartizione dell’Africa, imperialismo in Asia, nazionalismo e tensioni tra le potenze",
+        description:
+            "Imperialismo e colonialismo tra Ottocento e Novecento, spartizione dell’Africa, espansione europea in Asia, crescita del nazionalismo e aumento delle tensioni tra le grandi potenze.",
+        content: rivoluzioniIndustrialiImperialismoParte3,
     },
 ];
 
