@@ -12,16 +12,20 @@ function HomePage({
         <main className="home-page">
             <header className="home-header">
                 <h1>
-                    Scienze della Formazione Primaria
+                    Test Scienze della Formazione Primaria 2026
                 </h1>
 
                 <p>
-                    Preparazione e simulazioni del
-                    test di ammissione
+                    Preparati gratuitamente al test di ammissione
+                    a Scienze della Formazione Primaria con
+                    simulazioni, quiz e materiale teorico.
                 </p>
             </header>
 
-            <section className="home-study-section">
+            <section
+                className="home-study-section"
+                aria-labelledby="study-title"
+            >
                 <button
                     type="button"
                     className="home-study-card"
@@ -36,24 +40,40 @@ function HomePage({
                             Preparazione teorica
                         </span>
 
-                        <h2>Area studio</h2>
+                        <h2 id="study-title">
+                            Studia per il test di Scienze della Formazione Primaria
+                        </h2>
 
                         <p>
-                            Studia gli argomenti del
-                            programma, ripassa la teoria
-                            e prepara le conoscenze
-                            necessarie per il test.
+                            Ripassa gli argomenti del programma
+                            di ammissione: italiano, logica,
+                            storia, geografia, matematica e
+                            scienze.
                         </p>
                     </div>
 
-                    <span className="home-study-card__arrow">
+                    <span
+                        className="home-study-card__arrow"
+                        aria-hidden="true"
+                    >
                         →
                     </span>
                 </button>
             </section>
 
-            <section className="simulations-section">
-                <h2>Scegli una simulazione</h2>
+            <section
+                className="simulations-section"
+                aria-labelledby="simulations-title"
+            >
+                <h2 id="simulations-title">
+                    Simulazioni gratuite del test
+                </h2>
+
+                <p>
+                    Scegli una simulazione e allenati con i quiz
+                    per il test di ammissione a Scienze della
+                    Formazione Primaria.
+                </p>
 
                 <div className="simulation-grid">
                     {simulations.map((simulation) => {
@@ -77,14 +97,12 @@ function HomePage({
                         const answeredCount =
                             progress
                                 ? Object.keys(
-                                    progress.answers ??
-                                    {},
+                                    progress.answers ?? {},
                                 ).length
                                 : 0;
 
                         let statusSymbol = "○";
-                        let statusText =
-                            "Non iniziata";
+                        let statusText = "Non iniziata";
 
                         if (isInProgress) {
                             statusSymbol = "◐";
@@ -120,13 +138,9 @@ function HomePage({
                                     <p>
                                         Punteggio:{" "}
                                         <strong>
-                                            {
-                                                completed.score
-                                            }
+                                            {completed.score}
                                             /
-                                            {
-                                                completed.total
-                                            }
+                                            {completed.total}
                                         </strong>
                                     </p>
                                 )}
@@ -135,13 +149,9 @@ function HomePage({
                                     <p>
                                         Risposte date:{" "}
                                         <strong>
-                                            {
-                                                answeredCount
-                                            }
+                                            {answeredCount}
                                             /
-                                            {
-                                                progress.total
-                                            }
+                                            {progress.total}
                                         </strong>
                                     </p>
                                 )}
@@ -149,8 +159,7 @@ function HomePage({
                                 {!isCompleted &&
                                     !isInProgress && (
                                         <p>
-                                            Non ancora
-                                            iniziata
+                                            Non ancora iniziata
                                         </p>
                                     )}
 
