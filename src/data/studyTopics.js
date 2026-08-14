@@ -70,6 +70,18 @@ import novecentoParte3 from "../content/study/letteratura/novecento-secondo-nove
 
 import fontiStoricheCronologia from "../content/study/storia/fonti-storiche-e-cronologia.md?raw";
 
+import storiaMedioevo from "../content/study/storia/medioevo.md?raw";
+
+import storiaMedioevoParte2 from "../content/study/storia/medioevo-parte-2.md?raw";
+
+import storiaMedioevoParte3 from "../content/study/storia/medioevo-parte-3.md?raw";
+
+import inizioEtaModerna from "../content/study/storia/inizio-eta-moderna-scoperte-riforma-rivoluzione-scientifica-assolutismo.md?raw";
+
+import inizioEtaModernaParte2 from "../content/study/storia/inizio-eta-moderna-parte-2-riforma-controriforma.md?raw";
+
+import inizioEtaModernaParte3 from "../content/study/storia/inizio-eta-moderna-parte-3-rivoluzione-scientifica-guerre-religione-assolutismo.md?raw";
+
 const studyTopics = [
     {
         id: "comprensione-del-testo",
@@ -432,6 +444,66 @@ const studyTopics = [
         description:
             "Tipi di fonti storiche, loro utilizzo e interpretazione, cronologia, periodizzazione e collocazione degli eventi nel tempo.",
         content: fontiStoricheCronologia,
+    },
+    {
+        id: "storia-medioevo",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 37,
+        title: "Storia — Medioevo",
+        description:
+            "Principali eventi, trasformazioni politiche, sociali, economiche e culturali del Medioevo.",
+        content: storiaMedioevo,
+    },
+    {
+        id: "storia-medioevo-parte-2",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 38,
+        title: "Storia — Medioevo — Parte 2 di 3: rinascita dell’anno Mille, Sacro Romano Impero, lotta per le investiture, Comuni, Repubbliche marinare e Crociate",
+        description:
+            "Ripresa economica e demografica dopo l’anno Mille, Sacro Romano Impero, lotta per le investiture, sviluppo dei Comuni, Repubbliche marinare e Crociate.",
+        content: storiaMedioevoParte2,
+    },
+    {
+        id: "storia-medioevo-parte-3",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 39,
+        title: "Storia — Medioevo — Parte 3 di 3: crisi del Trecento, peste nera, monarchie nazionali, guerra dei Cent’anni, crisi di papato e Impero e passaggio all’età moderna",
+        description:
+            "Crisi del Trecento, peste nera, consolidamento delle monarchie nazionali, guerra dei Cent’anni, crisi del papato e dell’Impero e trasformazioni che conducono verso l’età moderna.",
+        content: storiaMedioevoParte3,
+    },
+    {
+        id: "storia-inizio-eta-moderna",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 40,
+        title: "Storia — Inizio dell’età moderna: scoperte geografiche, Riforma e Controriforma, rivoluzione scientifica e assolutismo",
+        description:
+            "Scoperte geografiche, espansione europea, Riforma protestante e Controriforma, rivoluzione scientifica e sviluppo delle monarchie assolute.",
+        content: inizioEtaModerna,
+    },
+    {
+        id: "storia-inizio-eta-moderna-parte-2",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 41,
+        title: "Storia — Inizio dell’età moderna — Parte 2 di 3: Riforma protestante, Lutero, Calvinismo, Chiesa anglicana e Controriforma cattolica",
+        description:
+            "Riforma protestante, Martin Lutero, Calvinismo, nascita della Chiesa anglicana e risposta della Chiesa cattolica attraverso Controriforma e Concilio di Trento.",
+        content: inizioEtaModernaParte2,
+    },
+    {
+        id: "storia-inizio-eta-moderna-parte-3",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 42,
+        title: "Storia — Inizio dell’età moderna — Parte 3 di 3: rivoluzione scientifica, guerre di religione europee, guerra dei Trent’anni e assolutismo",
+        description:
+            "Rivoluzione scientifica, principali guerre di religione europee, guerra dei Trent’anni, pace di Westfalia e sviluppo dell’assolutismo monarchico.",
+        content: inizioEtaModernaParte3,
     },
 ];
 
