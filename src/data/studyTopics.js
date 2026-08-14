@@ -110,6 +110,8 @@ import fascismoNazismo from "../content/study/storia/fascismo-nazismo.md?raw";
 
 import fascismoNazismoParte2 from "../content/study/storia/fascismo-nazismo-parte-2.md?raw";
 
+import fascismoNazismoParte3 from "../content/study/storia/fascismo-nazismo-parte-3.md?raw";
+
 const studyTopics = [
     {
         id: "comprensione-del-testo",
@@ -672,6 +674,16 @@ const studyTopics = [
         description:
             "Consolidamento del regime fascista, Patti Lateranensi, propaganda e controllo della società, politica economica, imperialismo, leggi razziali e progressivo avvicinamento dell’Italia alla Germania nazista.",
         content: fascismoNazismoParte2,
+    },
+    {
+        id: "storia-fascismo-nazismo-parte-3",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 57,
+        title: "Storia — Fascismo e nazismo — Parte 3 di 3: Repubblica di Weimar, crisi del 1929, ascesa di Hitler, ideologia nazista, dittatura, antisemitismo, persecuzione degli Ebrei ed espansionismo tedesco fino al 1939",
+        description:
+            "Repubblica di Weimar, conseguenze della crisi del 1929, ascesa di Hitler, ideologia e dittatura nazista, antisemitismo, persecuzione degli Ebrei ed espansionismo tedesco fino allo scoppio della Seconda guerra mondiale.",
+        content: fascismoNazismoParte3,
     },
 ];
 
