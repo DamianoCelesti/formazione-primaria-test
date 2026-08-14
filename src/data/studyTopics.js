@@ -100,6 +100,16 @@ import rivoluzioniIndustrialiImperialismoParte2 from "../content/study/storia/ri
 
 import rivoluzioniIndustrialiImperialismoParte3 from "../content/study/storia/rivoluzioni-industriali-imperialismo-parte-3.md?raw";
 
+import primaGuerraMondialeRivoluzioneRussa from "../content/study/storia/prima-guerra-mondiale-rivoluzione-russa.md?raw";
+
+import primaGuerraMondialeRivoluzioneRussaParte2 from "../content/study/storia/prima-guerra-mondiale-rivoluzione-russa-parte-2.md?raw";
+
+import primaGuerraMondialeRivoluzioneRussaParte3 from "../content/study/storia/prima-guerra-mondiale-rivoluzione-russa-parte-3.md?raw";
+
+import fascismoNazismo from "../content/study/storia/fascismo-nazismo.md?raw";
+
+import fascismoNazismoParte2 from "../content/study/storia/fascismo-nazismo-parte-2.md?raw";
+
 const studyTopics = [
     {
         id: "comprensione-del-testo",
@@ -612,6 +622,56 @@ const studyTopics = [
         description:
             "Imperialismo e colonialismo tra Ottocento e Novecento, spartizione dell’Africa, espansione europea in Asia, crescita del nazionalismo e aumento delle tensioni tra le grandi potenze.",
         content: rivoluzioniIndustrialiImperialismoParte3,
+    },
+    {
+        id: "storia-prima-guerra-mondiale-rivoluzione-russa",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 52,
+        title: "Storia — Prima guerra mondiale e Rivoluzione russa",
+        description:
+            "Cause, svolgimento e conseguenze della Prima guerra mondiale, intervento italiano, rivoluzioni russe del 1917, bolscevichi e nascita del nuovo Stato sovietico.",
+        content: primaGuerraMondialeRivoluzioneRussa,
+    },
+    {
+        id: "storia-prima-guerra-mondiale-rivoluzione-russa-parte-2",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 53,
+        title: "Storia — Prima guerra mondiale e Rivoluzione russa — Parte 2 di 3: 1917-1918, ingresso degli Stati Uniti, crisi degli Imperi centrali, Caporetto, Vittorio Veneto, armistizi e trattati di pace",
+        description:
+            "Gli anni conclusivi della Prima guerra mondiale: ingresso degli Stati Uniti, crisi degli Imperi centrali, Caporetto, Vittorio Veneto, armistizi e principali trattati di pace.",
+        content: primaGuerraMondialeRivoluzioneRussaParte2,
+    },
+    {
+        id: "storia-prima-guerra-mondiale-rivoluzione-russa-parte-3",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 54,
+        title: "Storia — Prima guerra mondiale e Rivoluzione russa — Parte 3 di 3: Russia zarista, rivoluzioni del 1905 e del 1917, Lenin, bolscevichi, guerra civile, nascita dell’URSS e Stalin",
+        description:
+            "Crisi della Russia zarista, rivoluzione del 1905, rivoluzioni del 1917, Lenin e i bolscevichi, guerra civile russa, nascita dell’URSS e affermazione di Stalin.",
+        content: primaGuerraMondialeRivoluzioneRussaParte3,
+    },
+    {
+        id: "storia-fascismo-nazismo",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 55,
+        title: "Storia — Fascismo e nazismo",
+        description:
+            "Nascita e affermazione del fascismo in Italia e del nazismo in Germania, caratteristiche dei regimi totalitari, propaganda, repressione, politica economica e razziale.",
+        content: fascismoNazismo,
+    },
+    {
+        id: "storia-fascismo-nazismo-parte-2",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 56,
+        title: "Storia — Fascismo e nazismo — Parte 2 di 3: regime fascista, Patti Lateranensi, propaganda e società, politica economica, imperialismo, leggi razziali e avvicinamento alla Germania nazista",
+        description:
+            "Consolidamento del regime fascista, Patti Lateranensi, propaganda e controllo della società, politica economica, imperialismo, leggi razziali e progressivo avvicinamento dell’Italia alla Germania nazista.",
+        content: fascismoNazismoParte2,
     },
 ];
 
