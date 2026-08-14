@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 import "../styles/home.css";
 
 function HomePage({
@@ -26,8 +28,8 @@ function HomePage({
                 className="home-study-section"
                 aria-labelledby="study-title"
             >
-                <button
-                    type="button"
+                <Link
+                    to="/studio"
                     className="home-study-card"
                     onClick={onOpenStudy}
                 >
@@ -58,7 +60,7 @@ function HomePage({
                     >
                         →
                     </span>
-                </button>
+                </Link>
             </section>
 
             <section
@@ -164,8 +166,8 @@ function HomePage({
                                     )}
 
                                 {isCompleted ? (
-                                    <button
-                                        type="button"
+                                    <Link
+                                        to={`/simulazioni/${simulation.id}`}
                                         onClick={() =>
                                             onReviewSimulation(
                                                 simulation.id,
@@ -173,10 +175,10 @@ function HomePage({
                                         }
                                     >
                                         Rivedi domande
-                                    </button>
+                                    </Link>
                                 ) : (
-                                    <button
-                                        type="button"
+                                    <Link
+                                        to={`/simulazioni/${simulation.id}`}
                                         onClick={() =>
                                             onStartSimulation(
                                                 simulation.id,
@@ -186,7 +188,7 @@ function HomePage({
                                         {isInProgress
                                             ? "Continua"
                                             : "Inizia"}
-                                    </button>
+                                    </Link>
                                 )}
                             </article>
                         );

@@ -267,7 +267,9 @@ function App() {
 
       title = `${topicTitle} | Test Scienze della Formazione Primaria 2026`;
 
-      description = `Studia ${topicTitle} per prepararti al test di ammissione a Scienze della Formazione Primaria 2026.`;
+      description =
+        currentStudyTopic.description ??
+        `Studia ${topicTitle} per prepararti al test di ammissione a Scienze della Formazione Primaria 2026.`;
 
       canonicalPath = `/studio/${encodeURIComponent(
         currentStudyTopic.id,
@@ -766,10 +768,13 @@ function App() {
     return (
       <StudyTopicPage
         topic={currentStudyTopic}
+        topics={studyTopics}
         onBackToStudy={
           handleBackToStudy
         }
-        onBackHome={handleBackHome}
+        onBackHome={
+          handleBackHome
+        }
       />
     );
   }

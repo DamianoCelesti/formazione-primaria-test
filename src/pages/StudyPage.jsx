@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 function StudyPage({
     topics,
     onOpenTopic,
@@ -25,13 +27,13 @@ function StudyPage({
         <main className="study-page">
             <div className="study-container">
                 <header className="study-header">
-                    <button
-                        type="button"
+                    <Link
+                        to="/"
                         className="study-back-button"
                         onClick={onBackHome}
                     >
                         ← Torna alla home
-                    </button>
+                    </Link>
 
                     <p className="study-eyebrow">
                         Preparazione al test
@@ -74,21 +76,27 @@ function StudyPage({
                                             </div>
 
                                             <div className="study-topic-card__content">
-                                                <h3>{topic.title}</h3>
+                                                <h3>
+                                                    {topic.title}
+                                                </h3>
 
                                                 <p>
-                                                    {topic.description}
+                                                    {
+                                                        topic.description
+                                                    }
                                                 </p>
                                             </div>
 
-                                            <button
-                                                type="button"
+                                            <Link
+                                                to={`/studio/${topic.id}`}
                                                 onClick={() =>
-                                                    onOpenTopic(topic.id)
+                                                    onOpenTopic(
+                                                        topic.id,
+                                                    )
                                                 }
                                             >
                                                 Studia
-                                            </button>
+                                            </Link>
                                         </article>
                                     ))}
                                 </div>

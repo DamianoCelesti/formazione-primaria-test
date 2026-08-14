@@ -1,116 +1,116 @@
-import comprensioneDelTesto from "../content/study/linguistica-logica/comprensione-del-testo.md?raw";
+import comprensioneDelTesto from "../content/study/linguistica-logica/comprensione-del-testo.md?url&no-inline";
 
-import lessicoESignificato from "../content/study/linguistica-logica/lessico-e-significato-delle-parole.md?raw";
+import lessicoESignificato from "../content/study/linguistica-logica/lessico-e-significato-delle-parole.md?url&no-inline";
 
-import grammaticaItaliana from "../content/study/linguistica-logica/grammatica-italiana.md?raw";
+import grammaticaItaliana from "../content/study/linguistica-logica/grammatica-italiana.md?url&no-inline";
 
-import grammaticaItalianaParte2 from "../content/study/linguistica-logica/grammatica-italiana-parte-2.md?raw";
+import grammaticaItalianaParte2 from "../content/study/linguistica-logica/grammatica-italiana-parte-2.md?url&no-inline";
 
-import analisiLogica from "../content/study/linguistica-logica/analisi-logica.md?raw";
+import analisiLogica from "../content/study/linguistica-logica/analisi-logica.md?url&no-inline";
 
-import analisiLogicaParte2 from "../content/study/linguistica-logica/analisi-logica-parte-2.md?raw";
+import analisiLogicaParte2 from "../content/study/linguistica-logica/analisi-logica-parte-2.md?url&no-inline";
 
-import analisiDelPeriodo from "../content/study/linguistica-logica/analisi-del-periodo.md?raw";
+import analisiDelPeriodo from "../content/study/linguistica-logica/analisi-del-periodo.md?url&no-inline";
 
-import analisiDelPeriodoParte2 from "../content/study/linguistica-logica/analisi-del-periodo-parte-2.md?raw";
+import analisiDelPeriodoParte2 from "../content/study/linguistica-logica/analisi-del-periodo-parte-2.md?url&no-inline";
 
-import logicaDeduzioniEInferenze from "../content/study/linguistica-logica/logica-deduzioni-e-inferenze.md?raw";
+import logicaDeduzioniEInferenze from "../content/study/linguistica-logica/logica-deduzioni-e-inferenze.md?url&no-inline";
 
-import logicaDeduzioniEInferenzeParte2 from "../content/study/linguistica-logica/logica-deduzioni-e-inferenze-parte-2.md?raw";
+import logicaDeduzioniEInferenzeParte2 from "../content/study/linguistica-logica/logica-deduzioni-e-inferenze-parte-2.md?url&no-inline";
 
-import logicaSillogismi from "../content/study/linguistica-logica/logica-sillogismi.md?raw";
+import logicaSillogismi from "../content/study/linguistica-logica/logica-sillogismi.md?url&no-inline";
 
-import logicaRelazioniOrdinamenti from "../content/study/linguistica-logica/logica-relazioni-logiche-e-ordinamenti.md?raw";
+import logicaRelazioniOrdinamenti from "../content/study/linguistica-logica/logica-relazioni-logiche-e-ordinamenti.md?url&no-inline";
 
-import logicaProblemiVincoli from "../content/study/linguistica-logica/logica-problemi-con-vincoli-e-piu-condizioni.md?raw";
+import logicaProblemiVincoli from "../content/study/linguistica-logica/logica-problemi-con-vincoli-e-piu-condizioni.md?url&no-inline";
 
-import logicaProblemiVincoliParte2 from "../content/study/linguistica-logica/logica-problemi-con-vincoli-e-piu-condizioni-parte-2.md?raw";
+import logicaProblemiVincoliParte2 from "../content/study/linguistica-logica/logica-problemi-con-vincoli-e-piu-condizioni-parte-2.md?url&no-inline";
 
-import logicaSerieNumeriche from "../content/study/linguistica-logica/logica-serie-numeriche.md?raw";
+import logicaSerieNumeriche from "../content/study/linguistica-logica/logica-serie-numeriche.md?url&no-inline";
 
-import logicaSerieAlfabetiche from "../content/study/linguistica-logica/logica-serie-alfabetiche.md?raw";
+import logicaSerieAlfabetiche from "../content/study/linguistica-logica/logica-serie-alfabetiche.md?url&no-inline";
 
-import logicaSerieMiste from "../content/study/linguistica-logica/logica-serie-miste.md?raw";
+import logicaSerieMiste from "../content/study/linguistica-logica/logica-serie-miste.md?url&no-inline";
 
-import logicaAnalogie from "../content/study/linguistica-logica/logica-analogie.md?raw";
+import logicaAnalogie from "../content/study/linguistica-logica/logica-analogie.md?url&no-inline";
 
-import logicaClassificazioni from "../content/study/linguistica-logica/logica-classificazioni.md?raw";
+import logicaClassificazioni from "../content/study/linguistica-logica/logica-classificazioni.md?url&no-inline";
 
-import logicaElementoEstraneo from "../content/study/linguistica-logica/logica-elemento-estraneo.md?raw";
+import logicaElementoEstraneo from "../content/study/linguistica-logica/logica-elemento-estraneo.md?url&no-inline";
 
-import logicaRagionamentoConSimboli from "../content/study/linguistica-logica/logica-ragionamento-con-simboli.md?raw";
+import logicaRagionamentoConSimboli from "../content/study/linguistica-logica/logica-ragionamento-con-simboli.md?url&no-inline";
 
-import generiLetterariAnalisiTesto from "../content/study/letteratura/generi-letterari-e-analisi-del-testo.md?raw";
+import generiLetterariAnalisiTesto from "../content/study/letteratura/generi-letterari-e-analisi-del-testo.md?url&no-inline";
 
-import strutturaTestoNarrativo from "../content/study/letteratura/struttura-del-testo-narrativo.md?raw";
+import strutturaTestoNarrativo from "../content/study/letteratura/struttura-del-testo-narrativo.md?url&no-inline";
 
-import medioevoStilNovoDantePetrarcaBoccaccio from "../content/study/letteratura/medioevo-dolce-stil-novo-dante-petrarca-boccaccio.md?raw";
+import medioevoStilNovoDantePetrarcaBoccaccio from "../content/study/letteratura/medioevo-dolce-stil-novo-dante-petrarca-boccaccio.md?url&no-inline";
 
-import medioevoParte2PetrarcaBoccaccio from "../content/study/letteratura/medioevo-parte-2-petrarca-boccaccio.md?raw";
+import medioevoParte2PetrarcaBoccaccio from "../content/study/letteratura/medioevo-parte-2-petrarca-boccaccio.md?url&no-inline";
 
 import umanesimoRinascimentoSeicento from "../content/study/letteratura/umanesimo-rinascimento-seicento-ariosto-machiavelli-tasso-marino-galileo.md?raw";
 
 import umanesimoRinascimentoSeicentoParte2 from "../content/study/letteratura/umanesimo-rinascimento-seicento-parte-2-barocco-marino-galileo.md?raw";
 
-import settecentoIlluminismo from "../content/study/letteratura/settecento-illuminismo-goldoni-parini-alfieri.md?raw";
+import settecentoIlluminismo from "../content/study/letteratura/settecento-illuminismo-goldoni-parini-alfieri.md?url&no-inline";
 
-import ottocentoRomanticismo from "../content/study/letteratura/ottocento-romanticismo-foscolo-manzoni-leopardi.md?raw";
+import ottocentoRomanticismo from "../content/study/letteratura/ottocento-romanticismo-foscolo-manzoni-leopardi.md?url&no-inline";
 
-import ottocentoRomanticismoParte2 from "../content/study/letteratura/ottocento-romanticismo-parte-2-leopardi-canti-operette-morali.md?raw";
+import ottocentoRomanticismoParte2 from "../content/study/letteratura/ottocento-romanticismo-parte-2-leopardi-canti-operette-morali.md?url&no-inline";
 
-import verismoDecadentismo from "../content/study/letteratura/verismo-decadentismo-verga-pascoli-dannunzio.md?raw";
+import verismoDecadentismo from "../content/study/letteratura/verismo-decadentismo-verga-pascoli-dannunzio.md?url&no-inline";
 
-import verismoDecadentismoParte2 from "../content/study/letteratura/verismo-decadentismo-parte-2-pascoli-dannunzio.md?raw";
+import verismoDecadentismoParte2 from "../content/study/letteratura/verismo-decadentismo-parte-2-pascoli-dannunzio.md?url&no-inline";
 
-import novecentoSecondoNovecento from "../content/study/letteratura/novecento-secondo-novecento-autori-principali.md?raw";
+import novecentoSecondoNovecento from "../content/study/letteratura/novecento-secondo-novecento-autori-principali.md?url&no-inline";
 
-import novecentoParte2 from "../content/study/letteratura/novecento-secondo-novecento-parte-2-ungaretti-montale-saba-quasimodo.md?raw";
+import novecentoParte2 from "../content/study/letteratura/novecento-secondo-novecento-parte-2-ungaretti-montale-saba-quasimodo.md?url&no-inline";
 
-import novecentoParte3 from "../content/study/letteratura/novecento-secondo-novecento-parte-3-levi-calvino-pavese-fenoglio-moravia.md?raw";
+import novecentoParte3 from "../content/study/letteratura/novecento-secondo-novecento-parte-3-levi-calvino-pavese-fenoglio-moravia.md?url&no-inline";
 
-import fontiStoricheCronologia from "../content/study/storia/fonti-storiche-e-cronologia.md?raw";
+import fontiStoricheCronologia from "../content/study/storia/fonti-storiche-e-cronologia.md?url&no-inline";
 
-import storiaMedioevo from "../content/study/storia/medioevo.md?raw";
+import storiaMedioevo from "../content/study/storia/medioevo.md?url&no-inline";
 
-import storiaMedioevoParte2 from "../content/study/storia/medioevo-parte-2.md?raw";
+import storiaMedioevoParte2 from "../content/study/storia/medioevo-parte-2.md?url&no-inline";
 
-import storiaMedioevoParte3 from "../content/study/storia/medioevo-parte-3.md?raw";
+import storiaMedioevoParte3 from "../content/study/storia/medioevo-parte-3.md?url&no-inline";
 
-import inizioEtaModerna from "../content/study/storia/inizio-eta-moderna-scoperte-riforma-rivoluzione-scientifica-assolutismo.md?raw";
+import inizioEtaModerna from "../content/study/storia/inizio-eta-moderna-scoperte-riforma-rivoluzione-scientifica-assolutismo.md?url&no-inline";
 
-import inizioEtaModernaParte2 from "../content/study/storia/inizio-eta-moderna-parte-2-riforma-controriforma.md?raw";
+import inizioEtaModernaParte2 from "../content/study/storia/inizio-eta-moderna-parte-2-riforma-controriforma.md?url&no-inline";
 
 import inizioEtaModernaParte3 from "../content/study/storia/inizio-eta-moderna-parte-3-rivoluzione-scientifica-guerre-religione-assolutismo.md?raw";
 
-import illuminismoRivoluzioni from "../content/study/storia/illuminismo-rivoluzioni-americana-francese-napoleone-congresso-vienna.md?raw";
+import illuminismoRivoluzioni from "../content/study/storia/illuminismo-rivoluzioni-americana-francese-napoleone-congresso-vienna.md?url&no-inline";
 
-import illuminismoRivoluzioniParte2 from "../content/study/storia/illuminismo-rivoluzioni-parte-2-rivoluzione-francese.md?raw";
+import illuminismoRivoluzioniParte2 from "../content/study/storia/illuminismo-rivoluzioni-parte-2-rivoluzione-francese.md?url&no-inline";
 
-import illuminismoRivoluzioniParte3 from "../content/study/storia/illuminismo-rivoluzioni-parte-3-napoleone-congresso-vienna.md?raw";
+import illuminismoRivoluzioniParte3 from "../content/study/storia/illuminismo-rivoluzioni-parte-3-napoleone-congresso-vienna.md?url&no-inline";
 
-import risorgimentoUnitaItalia from "../content/study/storia/risorgimento-unita-italia.md?raw";
+import risorgimentoUnitaItalia from "../content/study/storia/risorgimento-unita-italia.md?url&no-inline";
 
-import risorgimentoUnitaItaliaParte2 from "../content/study/storia/risorgimento-unita-italia-parte-2.md?raw";
+import risorgimentoUnitaItaliaParte2 from "../content/study/storia/risorgimento-unita-italia-parte-2.md?url&no-inline";
 
-import risorgimentoUnitaItaliaParte3 from "../content/study/storia/risorgimento-unita-italia-parte-3.md?raw";
+import risorgimentoUnitaItaliaParte3 from "../content/study/storia/risorgimento-unita-italia-parte-3.md?url&no-inline";
 
-import rivoluzioniIndustrialiImperialismo from "../content/study/storia/rivoluzioni-industriali-imperialismo.md?raw";
+import rivoluzioniIndustrialiImperialismo from "../content/study/storia/rivoluzioni-industriali-imperialismo.md?url&no-inline";
 
-import rivoluzioniIndustrialiImperialismoParte2 from "../content/study/storia/rivoluzioni-industriali-imperialismo-parte-2.md?raw";
+import rivoluzioniIndustrialiImperialismoParte2 from "../content/study/storia/rivoluzioni-industriali-imperialismo-parte-2.md?url&no-inline";
 
-import rivoluzioniIndustrialiImperialismoParte3 from "../content/study/storia/rivoluzioni-industriali-imperialismo-parte-3.md?raw";
+import rivoluzioniIndustrialiImperialismoParte3 from "../content/study/storia/rivoluzioni-industriali-imperialismo-parte-3.md?url&no-inline";
 
-import primaGuerraMondialeRivoluzioneRussa from "../content/study/storia/prima-guerra-mondiale-rivoluzione-russa.md?raw";
+import primaGuerraMondialeRivoluzioneRussa from "../content/study/storia/prima-guerra-mondiale-rivoluzione-russa.md?url&no-inline";
 
-import primaGuerraMondialeRivoluzioneRussaParte2 from "../content/study/storia/prima-guerra-mondiale-rivoluzione-russa-parte-2.md?raw";
+import primaGuerraMondialeRivoluzioneRussaParte2 from "../content/study/storia/prima-guerra-mondiale-rivoluzione-russa-parte-2.md?url&no-inline";
 
-import primaGuerraMondialeRivoluzioneRussaParte3 from "../content/study/storia/prima-guerra-mondiale-rivoluzione-russa-parte-3.md?raw";
+import primaGuerraMondialeRivoluzioneRussaParte3 from "../content/study/storia/prima-guerra-mondiale-rivoluzione-russa-parte-3.md?url&no-inline";
 
-import fascismoNazismo from "../content/study/storia/fascismo-nazismo.md?raw";
+import fascismoNazismo from "../content/study/storia/fascismo-nazismo.md?url&no-inline";
 
-import fascismoNazismoParte2 from "../content/study/storia/fascismo-nazismo-parte-2.md?raw";
+import fascismoNazismoParte2 from "../content/study/storia/fascismo-nazismo-parte-2.md?url&no-inline";
 
-import fascismoNazismoParte3 from "../content/study/storia/fascismo-nazismo-parte-3.md?raw";
+import fascismoNazismoParte3 from "../content/study/storia/fascismo-nazismo-parte-3.md?url&no-inline";
 
 const studyTopics = [
     {
