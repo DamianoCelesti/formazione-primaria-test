@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router";
 
 import Question from "./components/Question";
 import QuestionNavigator from "./components/QuestionNavigator";
@@ -24,6 +25,9 @@ const COMPLETED_STORAGE_KEY =
 const PROGRESS_STORAGE_KEY =
   "formazione-primaria-simulation-progress";
 
+const SITE_URL =
+  "https://damianocelesti.github.io/formazione-primaria-test";
+
 function loadStorage(key) {
   const savedData = localStorage.getItem(key);
 
@@ -39,6 +43,9 @@ function loadStorage(key) {
 }
 
 function App() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const [currentPage, setCurrentPage] =
     useState("home");
 
@@ -122,6 +129,200 @@ function App() {
           !answers[question.id],
       )
       .map((question) => question.id);
+
+  useEffect(() => {
+    const searchParams = new URLSearchParams(
+      location.search,
+    );
+
+    const shouldReview =
+      searchParams.get("revisione") === "1";
+
+    const pathParts = location.pathname
+      .split("/")
+      .filter(Boolean);
+
+    if (pathParts.length === 0) {
+      setCurrentPage("home");
+      setCurrentStudyTopicId(null);
+      setIsConfirmingSubmit(false);
+      return;
+    }
+
+    if (pathParts[0] === "studio") {
+      if (pathParts.length === 1) {
+        setCurrentStudyTopicId(null);
+        setCurrentPage("study");
+        setIsConfirmingSubmit(false);
+        return;
+      }
+
+      const topicId =
+        decodeURIComponent(pathParts[1]);
+
+      const topicExists = studyTopics.some(
+        (topic) => topic.id === topicId,
+      );
+
+      if (topicExists) {
+        setCurrentStudyTopicId(topicId);
+        setCurrentPage("study-topic");
+        setIsConfirmingSubmit(false);
+        return;
+      }
+
+      navigate("/studio", { replace: true });
+      return;
+    }
+
+    if (
+      pathParts[0] === "simulazioni" &&
+      pathParts[1]
+    ) {
+      const simulationId =
+        decodeURIComponent(pathParts[1]);
+
+      const selectedSimulation =
+        simulations.find(
+          (simulation) =>
+            simulation.id === simulationId,
+        );
+
+      if (!selectedSimulation) {
+        navigate("/", { replace: true });
+        return;
+      }
+
+      const savedCompleted =
+        loadStorage(COMPLETED_STORAGE_KEY)[
+        simulationId
+        ];
+
+      const savedProgress =
+        loadStorage(PROGRESS_STORAGE_KEY)[
+        simulationId
+        ];
+
+      setCurrentSimulationId(simulationId);
+      setCurrentStudyTopicId(null);
+      setIsConfirmingSubmit(false);
+
+      if (savedCompleted) {
+        setAnswers(
+          savedCompleted.answers ?? {},
+        );
+        setCurrentQuestionIndex(0);
+        setIsSubmitted(true);
+        setIsReviewing(shouldReview);
+      } else {
+        setAnswers(
+          savedProgress?.answers ?? {},
+        );
+        setCurrentQuestionIndex(
+          savedProgress?.currentQuestionIndex ??
+          0,
+        );
+        setIsSubmitted(false);
+        setIsReviewing(false);
+      }
+
+      setCurrentPage("simulation");
+      return;
+    }
+
+    navigate("/", { replace: true });
+  }, [
+    location.pathname,
+    location.search,
+    navigate,
+  ]);
+
+  useEffect(() => {
+    let title =
+      "Simulazioni Test Scienze della Formazione Primaria 2026 | Quiz Gratis";
+
+    let description =
+      "Simulazioni gratuite per il test di ammissione a Scienze della Formazione Primaria 2026: quiz di italiano, logica, storia, geografia, matematica e scienze.";
+
+    let canonicalPath = "/";
+
+    if (currentPage === "study") {
+      title =
+        "Preparazione Test Scienze della Formazione Primaria 2026 | Teoria";
+
+      description =
+        "Studia la teoria per il test di Scienze della Formazione Primaria 2026: italiano, logica, storia, geografia, matematica e scienze.";
+
+      canonicalPath = "/studio";
+    }
+
+    if (
+      currentPage === "study-topic" &&
+      currentStudyTopic
+    ) {
+      const topicTitle =
+        currentStudyTopic.title ??
+        currentStudyTopic.name ??
+        currentStudyTopic.id;
+
+      title = `${topicTitle} | Test Scienze della Formazione Primaria 2026`;
+
+      description = `Studia ${topicTitle} per prepararti al test di ammissione a Scienze della Formazione Primaria 2026.`;
+
+      canonicalPath = `/studio/${encodeURIComponent(
+        currentStudyTopic.id,
+      )}`;
+    }
+
+    if (
+      currentPage === "simulation" &&
+      currentSimulation
+    ) {
+      const simulationTitle =
+        currentSimulation.title ??
+        `Simulazione ${currentSimulation.number ?? ""
+        }`;
+
+      title = `${simulationTitle} | Test Scienze della Formazione Primaria 2026`;
+
+      description =
+        "Esercitati gratuitamente con una simulazione del test di ammissione a Scienze della Formazione Primaria 2026.";
+
+      canonicalPath = `/simulazioni/${encodeURIComponent(
+        currentSimulation.id,
+      )}`;
+    }
+
+    document.title = title;
+
+    const descriptionMeta =
+      document.querySelector(
+        'meta[name="description"]',
+      );
+
+    if (descriptionMeta) {
+      descriptionMeta.setAttribute(
+        "content",
+        description,
+      );
+    }
+
+    const canonicalLink =
+      document.querySelector(
+        'link[rel="canonical"]',
+      );
+
+    if (canonicalLink) {
+      canonicalLink.setAttribute(
+        "href",
+        `${SITE_URL}${canonicalPath}`,
+      );
+    }
+  }, [
+    currentPage,
+    currentSimulation,
+    currentStudyTopic,
+  ]);
 
   useEffect(() => {
     if (
@@ -216,6 +417,12 @@ function App() {
 
     setCurrentPage("simulation");
 
+    navigate(
+      `/simulazioni/${encodeURIComponent(
+        simulationId,
+      )}`,
+    );
+
     window.scrollTo({
       top: 0,
       behavior: "smooth",
@@ -256,6 +463,12 @@ function App() {
     setIsConfirmingSubmit(false);
 
     setCurrentPage("simulation");
+
+    navigate(
+      `/simulazioni/${encodeURIComponent(
+        simulationId,
+      )}?revisione=1`,
+    );
 
     window.scrollTo({
       top: 0,
@@ -422,6 +635,13 @@ function App() {
   function handleReview() {
     setIsReviewing(true);
 
+    navigate(
+      `/simulazioni/${encodeURIComponent(
+        currentSimulationId,
+      )}?revisione=1`,
+      { replace: true },
+    );
+
     window.scrollTo({
       top: 0,
       behavior: "smooth",
@@ -430,6 +650,13 @@ function App() {
 
   function handleBackToResults() {
     setIsReviewing(false);
+
+    navigate(
+      `/simulazioni/${encodeURIComponent(
+        currentSimulationId,
+      )}`,
+      { replace: true },
+    );
 
     window.scrollTo({
       top: 0,
@@ -443,6 +670,8 @@ function App() {
     setCurrentStudyTopicId(null);
     setCurrentPage("study");
 
+    navigate("/studio");
+
     window.scrollTo({
       top: 0,
       behavior: "smooth",
@@ -453,6 +682,12 @@ function App() {
     setCurrentStudyTopicId(topicId);
     setCurrentPage("study-topic");
 
+    navigate(
+      `/studio/${encodeURIComponent(
+        topicId,
+      )}`,
+    );
+
     window.scrollTo({
       top: 0,
       behavior: "smooth",
@@ -462,6 +697,8 @@ function App() {
   function handleBackToStudy() {
     setCurrentStudyTopicId(null);
     setCurrentPage("study");
+
+    navigate("/studio");
 
     window.scrollTo({
       top: 0,
@@ -477,6 +714,8 @@ function App() {
     setIsSubmitted(false);
     setIsReviewing(false);
     setIsConfirmingSubmit(false);
+
+    navigate("/");
 
     window.scrollTo({
       top: 0,
@@ -744,11 +983,19 @@ function App() {
               handleBackToResults
             }
           />
+
+          <div className="quiz-actions">
+            <button
+              type="button"
+              onClick={handleBackHome}
+            >
+              ← Torna alla home
+            </button>
+          </div>
         </div>
       </main>
     );
   }
-
   /* RISULTATI */
 
   if (isSubmitted) {
