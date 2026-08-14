@@ -3441,3 +3441,5 @@ const simulation01 = [
         ],
     },
 ];
+
+export default simulation01;
