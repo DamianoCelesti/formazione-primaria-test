@@ -52,17 +52,93 @@ function loadStorage(key) {
   }
 }
 
+
+function getInitialRoute(pathname) {
+  const pathParts = pathname
+    .split("/")
+    .filter(Boolean);
+
+  if (pathParts.length === 0) {
+    return {
+      page: "home",
+      topicId: null,
+      simulationId: null,
+    };
+  }
+
+  if (pathParts[0] === "studio") {
+    if (pathParts.length === 1) {
+      return {
+        page: "study",
+        topicId: null,
+        simulationId: null,
+      };
+    }
+
+    const topicId =
+      decodeURIComponent(pathParts[1]);
+
+    const topicExists = studyTopics.some(
+      (topic) => topic.id === topicId,
+    );
+
+    if (topicExists) {
+      return {
+        page: "study-topic",
+        topicId,
+        simulationId: null,
+      };
+    }
+  }
+
+  if (
+    pathParts[0] === "simulazioni" &&
+    pathParts[1]
+  ) {
+    const simulationId =
+      decodeURIComponent(pathParts[1]);
+
+    const simulationExists =
+      simulations.some(
+        (simulation) =>
+          simulation.id === simulationId,
+      );
+
+    if (simulationExists) {
+      return {
+        page: "simulation",
+        topicId: null,
+        simulationId,
+      };
+    }
+  }
+
+  return {
+    page: "home",
+    topicId: null,
+    simulationId: null,
+  };
+}
+
 function App() {
   const navigate = useNavigate();
   const location = useLocation();
 
+  const [initialRoute] = useState(() =>
+    getInitialRoute(location.pathname),
+  );
+
   const [currentPage, setCurrentPage] =
-    useState("home");
+    useState(initialRoute.page);
 
   const [
     currentSimulationId,
     setCurrentSimulationId,
-  ] = useState(simulations[0]?.id ?? "");
+  ] = useState(
+    initialRoute.simulationId ??
+    simulations[0]?.id ??
+    "",
+  );
 
   const [
     currentQuestions,
@@ -92,7 +168,9 @@ function App() {
   const [
     currentStudyTopicId,
     setCurrentStudyTopicId,
-  ] = useState(null);
+  ] = useState(
+    initialRoute.topicId ?? null,
+  );
 
   const [answers, setAnswers] =
     useState({});

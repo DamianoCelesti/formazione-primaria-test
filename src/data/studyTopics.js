@@ -126,6 +126,12 @@ import geografiaAstronomicaOrientamento from "../content/study/geografia/geograf
 
 import geografiaFisica from "../content/study/geografia/geografia-fisica.md?url&no-inline";
 
+import italiaEuropaFisica from "../content/study/geografia/italia-europa-fisica.md?url&no-inline";
+
+import geografiaAntropicaSociale from "../content/study/geografia/geografia-antropica-sociale.md?url&no-inline";
+
+import geografiaEconomica from "../content/study/geografia/geografia-economica.md?url&no-inline";
+
 const studyTopics = [
     {
         id: "comprensione-del-testo",
@@ -768,6 +774,36 @@ const studyTopics = [
         description:
             "Principali elementi della geografia fisica: montagne, colline e pianure, caratteristiche dei fiumi e dei laghi, mari e coste, bacini idrografici e fattori ed elementi che determinano il clima.",
         content: geografiaFisica,
+    },
+    {
+        id: "geografia-italia-europa-fisica",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 65,
+        title: "Geografia — Italia ed Europa fisica: Alpi, Appennini, principali pianure, fiumi, laghi, mari, penisole, isole, catene montuose e grandi regioni fisiche europee",
+        description:
+            "Geografia fisica dell’Italia e dell’Europa: Alpi e Appennini, principali pianure, fiumi e laghi italiani, mari e isole, penisole europee, grandi catene montuose, sistemi fluviali e principali regioni fisiche del continente.",
+        content: italiaEuropaFisica,
+    },
+    {
+        id: "geografia-geografia-antropica-sociale",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 66,
+        title: "Geografia — Geografia antropica e sociale: popolazione, densità, distribuzione, natalità, mortalità, saldo naturale, migrazioni, urbanizzazione, città, metropoli e indicatori demografici",
+        description:
+            "Principali concetti della geografia antropica e demografica: popolazione e sua distribuzione, densità, natalità e mortalità, saldo naturale, migrazioni, urbanizzazione, città e metropoli e principali indicatori demografici.",
+        content: geografiaAntropicaSociale,
+    },
+    {
+        id: "geografia-geografia-economica",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 67,
+        title: "Geografia — Geografia economica: settori primario, secondario e terziario, agricoltura, industria, servizi, commercio, trasporti, globalizzazione, risorse energetiche, sviluppo economico e sostenibilità",
+        description:
+            "Principali concetti della geografia economica: settori primario, secondario e terziario, agricoltura, industria e servizi, commercio e trasporti, globalizzazione, fonti e risorse energetiche, sviluppo economico e sostenibilità.",
+        content: geografiaEconomica,
     },
 ];
 
