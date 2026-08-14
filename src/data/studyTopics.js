@@ -48,9 +48,9 @@ import medioevoStilNovoDantePetrarcaBoccaccio from "../content/study/letteratura
 
 import medioevoParte2PetrarcaBoccaccio from "../content/study/letteratura/medioevo-parte-2-petrarca-boccaccio.md?url&no-inline";
 
-import umanesimoRinascimentoSeicento from "../content/study/letteratura/umanesimo-rinascimento-seicento-ariosto-machiavelli-tasso-marino-galileo.md?raw";
+import umanesimoRinascimentoSeicento from "../content/study/letteratura/umanesimo-rinascimento-seicento-ariosto-machiavelli-tasso-marino-galileo.md?url&no-inline";
 
-import umanesimoRinascimentoSeicentoParte2 from "../content/study/letteratura/umanesimo-rinascimento-seicento-parte-2-barocco-marino-galileo.md?raw";
+import umanesimoRinascimentoSeicentoParte2 from "../content/study/letteratura/umanesimo-rinascimento-seicento-parte-2-barocco-marino-galileo.md?url&no-inline";
 
 import settecentoIlluminismo from "../content/study/letteratura/settecento-illuminismo-goldoni-parini-alfieri.md?url&no-inline";
 
@@ -80,7 +80,7 @@ import inizioEtaModerna from "../content/study/storia/inizio-eta-moderna-scopert
 
 import inizioEtaModernaParte2 from "../content/study/storia/inizio-eta-moderna-parte-2-riforma-controriforma.md?url&no-inline";
 
-import inizioEtaModernaParte3 from "../content/study/storia/inizio-eta-moderna-parte-3-rivoluzione-scientifica-guerre-religione-assolutismo.md?raw";
+import inizioEtaModernaParte3 from "../content/study/storia/inizio-eta-moderna-parte-3-rivoluzione-scientifica-guerre-religione-assolutismo.md?url&no-inline";
 
 import illuminismoRivoluzioni from "../content/study/storia/illuminismo-rivoluzioni-americana-francese-napoleone-congresso-vienna.md?url&no-inline";
 
