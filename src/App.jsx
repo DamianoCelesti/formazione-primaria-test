@@ -1,4 +1,9 @@
-import { useEffect, useState } from "react";
+import {
+  lazy,
+  Suspense,
+  useEffect,
+  useState,
+} from "react";
 import { useLocation, useNavigate } from "react-router";
 
 import Question from "./components/Question";
@@ -6,8 +11,13 @@ import QuestionNavigator from "./components/QuestionNavigator";
 import ResultsSummary from "./components/ResultsSummary";
 import AnswerReview from "./components/AnswerReview";
 
-import StudyPage from "./pages/StudyPage";
-import StudyTopicPage from "./pages/StudyTopicPage";
+const StudyPage = lazy(
+  () => import("./pages/StudyPage"),
+);
+
+const StudyTopicPage = lazy(
+  () => import("./pages/StudyTopicPage"),
+);
 import HomePage from "./pages/HomePage";
 
 import studyTopics from "./data/studyTopics";
@@ -15,7 +25,7 @@ import simulations from "./data/simulations";
 
 import calculateScore from "./utils/calculateScore";
 
-import "./styles/study.css";
+
 import "./styles/quiz.css";
 import "./styles/review.css";
 
@@ -750,15 +760,28 @@ function App() {
 
   /* AREA STUDIO */
 
+
   if (currentPage === "study") {
     return (
-      <StudyPage
-        topics={studyTopics}
-        onOpenTopic={
-          handleOpenStudyTopic
+      <Suspense
+        fallback={
+          <main className="study-page">
+            <div className="study-container">
+              <p>Caricamento area studio...</p>
+            </div>
+          </main>
         }
-        onBackHome={handleBackHome}
-      />
+      >
+        <StudyPage
+          topics={studyTopics}
+          onOpenTopic={
+            handleOpenStudyTopic
+          }
+          onBackHome={
+            handleBackHome
+          }
+        />
+      </Suspense>
     );
   }
 
@@ -766,19 +789,28 @@ function App() {
 
   if (currentPage === "study-topic") {
     return (
-      <StudyTopicPage
-        topic={currentStudyTopic}
-        topics={studyTopics}
-        onBackToStudy={
-          handleBackToStudy
+      <Suspense
+        fallback={
+          <main className="study-page">
+            <div className="study-container">
+              <p>Caricamento argomento...</p>
+            </div>
+          </main>
         }
-        onBackHome={
-          handleBackHome
-        }
-      />
+      >
+        <StudyTopicPage
+          topic={currentStudyTopic}
+          topics={studyTopics}
+          onBackToStudy={
+            handleBackToStudy
+          }
+          onBackHome={
+            handleBackHome
+          }
+        />
+      </Suspense>
     );
   }
-
   /* CONFERMA CONSEGNA */
 
   if (isConfirmingSubmit) {

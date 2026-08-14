@@ -3,6 +3,7 @@ import { Link } from "react-router";
 
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import "../styles/study.css";
 
 function StudyTopicPage({
     topic,

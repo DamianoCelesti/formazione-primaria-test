@@ -112,6 +112,16 @@ import fascismoNazismoParte2 from "../content/study/storia/fascismo-nazismo-part
 
 import fascismoNazismoParte3 from "../content/study/storia/fascismo-nazismo-parte-3.md?url&no-inline";
 
+import secondaGuerraMondialeDopoguerra from "../content/study/storia/seconda-guerra-mondiale-shoah-repubblica-costituzione-guerra-fredda-decolonizzazione-integrazione-europea.md?url&no-inline";
+
+import secondaGuerraMondialeDopoguerraParte2 from "../content/study/storia/seconda-guerra-mondiale-dopoguerra-parte-2.md?url&no-inline";
+
+import secondaGuerraMondialeDopoguerraParte3 from "../content/study/storia/seconda-guerra-mondiale-dopoguerra-parte-3.md?url&no-inline";
+
+import secondaGuerraMondialeDopoguerraParte4 from "../content/study/storia/seconda-guerra-mondiale-dopoguerra-parte-4.md?url&no-inline";
+
+import secondaGuerraMondialeDopoguerraParte5 from "../content/study/storia/seconda-guerra-mondiale-dopoguerra-parte-5.md?url&no-inline";
+
 const studyTopics = [
     {
         id: "comprensione-del-testo",
@@ -684,6 +694,56 @@ const studyTopics = [
         description:
             "Repubblica di Weimar, conseguenze della crisi del 1929, ascesa di Hitler, ideologia e dittatura nazista, antisemitismo, persecuzione degli Ebrei ed espansionismo tedesco fino allo scoppio della Seconda guerra mondiale.",
         content: fascismoNazismoParte3,
+    },
+    {
+        id: "storia-seconda-guerra-mondiale-dopoguerra",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 58,
+        title: "Storia — Seconda guerra mondiale, Shoah, nascita della Repubblica italiana, Costituzione del 1948, Guerra fredda, decolonizzazione e integrazione europea",
+        description:
+            "Seconda guerra mondiale e Shoah, caduta del fascismo e nascita della Repubblica italiana, Costituzione del 1948, Guerra fredda, decolonizzazione e principali tappe dell’integrazione europea.",
+        content: secondaGuerraMondialeDopoguerra,
+    },
+    {
+        id: "storia-seconda-guerra-mondiale-dopoguerra-parte-2",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 59,
+        title: "Storia — Seconda guerra mondiale e dopoguerra — Parte 2 di 5: svolta del 1942-1943, Midway, El Alamein, Stalingrado, caduta di Mussolini, armistizio dell’8 settembre, Resistenza italiana, Repubblica Sociale Italiana, sbarco in Normandia e fine della guerra in Europa",
+        description:
+            "La svolta della Seconda guerra mondiale tra 1942 e 1943, Midway, El Alamein e Stalingrado, caduta di Mussolini, armistizio dell’8 settembre, Resistenza e Repubblica Sociale Italiana, sbarco in Normandia e conclusione della guerra in Europa.",
+        content: secondaGuerraMondialeDopoguerraParte2,
+    },
+    {
+        id: "storia-seconda-guerra-mondiale-dopoguerra-parte-3",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 60,
+        title: "Storia — Seconda guerra mondiale e dopoguerra — Parte 3 di 5: Shoah, ghetti, conferenza di Wannsee, campi di concentramento e sterminio, Auschwitz, Resistenza ebraica, liberazione dei campi, Hiroshima e Nagasaki, resa del Giappone, ONU e processi di Norimberga",
+        description:
+            "Shoah e persecuzione degli Ebrei, ghetti, conferenza di Wannsee, sistema concentrazionario e campi di sterminio, Auschwitz, forme di Resistenza ebraica, liberazione dei campi, bombe atomiche su Hiroshima e Nagasaki, resa del Giappone, nascita dell’ONU e processi di Norimberga.",
+        content: secondaGuerraMondialeDopoguerraParte3,
+    },
+    {
+        id: "storia-seconda-guerra-mondiale-dopoguerra-parte-4",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 61,
+        title: "Storia — Seconda guerra mondiale e dopoguerra — Parte 4 di 5: Italia dal 1945 al 1948, referendum del 2 giugno 1946, nascita della Repubblica, Assemblea Costituente, Costituzione italiana, principi fondamentali e prime istituzioni repubblicane",
+        description:
+            "L’Italia nel secondo dopoguerra, referendum istituzionale del 2 giugno 1946, nascita della Repubblica, Assemblea Costituente, entrata in vigore della Costituzione del 1948, principi fondamentali e formazione delle prime istituzioni repubblicane.",
+        content: secondaGuerraMondialeDopoguerraParte4,
+    },
+    {
+        id: "storia-seconda-guerra-mondiale-dopoguerra-parte-5",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 62,
+        title: "Storia — Seconda guerra mondiale e dopoguerra — Parte 5 di 5: Guerra fredda, divisione della Germania, NATO e Patto di Varsavia, crisi di Berlino e Cuba, decolonizzazione, caduta del Muro, fine dell’URSS e integrazione europea da CECA e CEE a Maastricht ed euro",
+        description:
+            "Guerra fredda e divisione della Germania, NATO e Patto di Varsavia, crisi di Berlino e di Cuba, decolonizzazione, caduta del Muro di Berlino, dissoluzione dell’URSS e principali tappe dell’integrazione europea dalla CECA e dalla CEE al Trattato di Maastricht e all’euro.",
+        content: secondaGuerraMondialeDopoguerraParte5,
     },
 ];
 
