@@ -136,6 +136,24 @@ import numeriQuattroOperazioni from "../content/study/matematica/numeri-quattro-
 
 import divisibilitaNumeriPrimi from "../content/study/matematica/divisibilita-numeri-primi.md?url&no-inline";
 
+import frazioniNumeriDecimali from "../content/study/matematica/frazioni-numeri-decimali.md?url&no-inline";
+
+import percentualiRapportiProporzioni from "../content/study/matematica/percentuali-rapporti-proporzioni.md?url&no-inline";
+
+import potenzeRadiciEspressioni from "../content/study/matematica/potenze-radici-espressioni.md?url&no-inline";
+
+import algebraEquazioni from "../content/study/matematica/algebra-equazioni.md?url&no-inline";
+
+import geometriaPiana from "../content/study/matematica/geometria-piana.md?url&no-inline";
+
+import areeCirconferenzaPitagora from "../content/study/matematica/aree-circonferenza-pitagora.md?url&no-inline";
+
+import geometriaSolida from "../content/study/matematica/geometria-solida.md?url&no-inline";
+
+import pianoCartesianoFunzioniGrafici from "../content/study/matematica/piano-cartesiano-funzioni-grafici.md?url&no-inline";
+
+import statisticaProbabilita from "../content/study/matematica/statistica-probabilita.md?url&no-inline";
+
 const studyTopics = [
     {
         id: "comprensione-del-testo",
@@ -828,6 +846,96 @@ const studyTopics = [
         description:
             "Multipli e divisori, principali criteri di divisibilità, numeri primi e composti, scomposizione in fattori primi e procedure per determinare massimo comune divisore e minimo comune multiplo.",
         content: divisibilitaNumeriPrimi,
+    },
+    {
+        id: "matematica-frazioni-numeri-decimali",
+        area: "cultura-matematico-scientifica",
+        areaTitle: "Cultura matematico-scientifica",
+        number: 70,
+        title: "Matematica — Frazioni e numeri decimali: significato della frazione, frazioni proprie, improprie e apparenti, equivalenza, semplificazione, confronto, operazioni, numeri decimali finiti e periodici e conversioni tra frazioni e decimali",
+        description:
+            "Significato e classificazione delle frazioni, frazioni equivalenti e semplificazione, confronto e operazioni, numeri decimali finiti e periodici e conversioni tra rappresentazione frazionaria e decimale.",
+        content: frazioniNumeriDecimali,
+    },
+    {
+        id: "matematica-percentuali-rapporti-proporzioni",
+        area: "cultura-matematico-scientifica",
+        areaTitle: "Cultura matematico-scientifica",
+        number: 71,
+        title: "Matematica — Percentuali, rapporti e proporzioni: calcolo della percentuale, aumento e diminuzione percentuale, percentuale inversa, rapporti, proporzioni, proprietà fondamentale, proporzionalità diretta e inversa e problemi applicativi",
+        description:
+            "Calcolo delle percentuali, aumenti e diminuzioni percentuali, percentuale inversa, rapporti e proporzioni, proprietà fondamentale delle proporzioni, grandezze direttamente e inversamente proporzionali e principali problemi applicativi.",
+        content: percentualiRapportiProporzioni,
+    },
+    {
+        id: "matematica-potenze-radici-espressioni",
+        area: "cultura-matematico-scientifica",
+        areaTitle: "Cultura matematico-scientifica",
+        number: 72,
+        title: "Matematica — Potenze, radici ed espressioni: significato di potenza, base ed esponente, proprietà delle potenze, esponente zero e negativo, potenze di 10, notazione scientifica, radice quadrata, quadrati perfetti e calcolo delle espressioni",
+        description:
+            "Significato di potenza, base ed esponente, proprietà delle potenze, esponenti zero e negativi, potenze di 10 e notazione scientifica, radici quadrate, quadrati perfetti e corretta risoluzione delle espressioni numeriche.",
+        content: potenzeRadiciEspressioni,
+    },
+    {
+        id: "matematica-algebra-equazioni",
+        area: "cultura-matematico-scientifica",
+        areaTitle: "Cultura matematico-scientifica",
+        number: 73,
+        title: "Matematica — Algebra ed equazioni: espressioni letterali, monomi, polinomi, termini simili, prodotti notevoli di base, equazioni di primo grado, principi di equivalenza e risoluzione delle equazioni",
+        description:
+            "Espressioni letterali, monomi e polinomi, riconoscimento e riduzione dei termini simili, principali prodotti notevoli, equazioni di primo grado, principi di equivalenza e procedimento per la risoluzione delle equazioni.",
+        content: algebraEquazioni,
+    },
+    {
+        id: "matematica-geometria-piana",
+        area: "cultura-matematico-scientifica",
+        areaTitle: "Cultura matematico-scientifica",
+        number: 74,
+        title: "Matematica — Geometria piana: punto, retta, segmento, angoli, rette parallele e perpendicolari, triangoli, quadrilateri, poligoni, perimetro e principali proprietà geometriche",
+        description:
+            "Concetti fondamentali della geometria piana: punto, retta e segmento, classificazione degli angoli, rette parallele e perpendicolari, triangoli, quadrilateri e altri poligoni, calcolo del perimetro e principali proprietà delle figure geometriche.",
+        content: geometriaPiana,
+    },
+    {
+        id: "matematica-aree-circonferenza-pitagora",
+        area: "cultura-matematico-scientifica",
+        areaTitle: "Cultura matematico-scientifica",
+        number: 75,
+        title: "Matematica — Aree, circonferenza e teorema di Pitagora: formule delle aree di triangoli e quadrilateri, cerchio e circonferenza, π, lunghezza della circonferenza, area del cerchio, teorema di Pitagora e principali applicazioni",
+        description:
+            "Formule per il calcolo delle aree di triangoli e principali quadrilateri, elementi del cerchio e della circonferenza, significato di π, lunghezza della circonferenza, area del cerchio, teorema di Pitagora e sue principali applicazioni.",
+        content: areeCirconferenzaPitagora,
+    },
+    {
+        id: "matematica-geometria-solida",
+        area: "cultura-matematico-scientifica",
+        areaTitle: "Cultura matematico-scientifica",
+        number: 76,
+        title: "Matematica — Geometria solida: prismi, parallelepipedo, cubo, piramide, cilindro, cono e sfera; superfici, volumi, unità cubiche e principali formule",
+        description:
+            "Principali solidi geometrici, caratteristiche di prismi, parallelepipedo, cubo, piramide, cilindro, cono e sfera, calcolo delle superfici e dei volumi, unità di misura cubiche e principali formule della geometria solida.",
+        content: geometriaSolida,
+    },
+    {
+        id: "matematica-piano-cartesiano-funzioni-grafici",
+        area: "cultura-matematico-scientifica",
+        areaTitle: "Cultura matematico-scientifica",
+        number: 77,
+        title: "Matematica — Piano cartesiano, funzioni e grafici: assi cartesiani, coordinate, quadranti, distanza e punto medio, funzione, variabile indipendente e dipendente, proporzionalità diretta, retta nel piano e interpretazione di grafici",
+        description:
+            "Piano cartesiano e coordinate dei punti, quadranti, distanza e punto medio, concetto di funzione e variabili, proporzionalità diretta, rappresentazione della retta nel piano cartesiano e lettura e interpretazione di grafici.",
+        content: pianoCartesianoFunzioniGrafici,
+    },
+    {
+        id: "matematica-statistica-probabilita",
+        area: "cultura-matematico-scientifica",
+        areaTitle: "Cultura matematico-scientifica",
+        number: 78,
+        title: "Matematica — Statistica e probabilità: popolazione e campione, frequenza assoluta e relativa, percentuali, media, mediana, moda, campo di variazione, tabelle e grafici, eventi, spazio campionario e probabilità",
+        description:
+            "Concetti fondamentali di statistica e probabilità: popolazione e campione, frequenze assolute e relative, media, mediana, moda e campo di variazione, organizzazione e interpretazione dei dati tramite tabelle e grafici, eventi, spazio campionario e calcolo della probabilità.",
+        content: statisticaProbabilita,
     },
 ];
 
