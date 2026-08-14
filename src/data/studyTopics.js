@@ -122,6 +122,10 @@ import secondaGuerraMondialeDopoguerraParte4 from "../content/study/storia/secon
 
 import secondaGuerraMondialeDopoguerraParte5 from "../content/study/storia/seconda-guerra-mondiale-dopoguerra-parte-5.md?url&no-inline";
 
+import geografiaAstronomicaOrientamento from "../content/study/geografia/geografia-astronomica-orientamento.md?url&no-inline";
+
+import geografiaFisica from "../content/study/geografia/geografia-fisica.md?url&no-inline";
+
 const studyTopics = [
     {
         id: "comprensione-del-testo",
@@ -744,6 +748,26 @@ const studyTopics = [
         description:
             "Guerra fredda e divisione della Germania, NATO e Patto di Varsavia, crisi di Berlino e di Cuba, decolonizzazione, caduta del Muro di Berlino, dissoluzione dell’URSS e principali tappe dell’integrazione europea dalla CECA e dalla CEE al Trattato di Maastricht e all’euro.",
         content: secondaGuerraMondialeDopoguerraParte5,
+    },
+    {
+        id: "geografia-geografia-astronomica-orientamento",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 63,
+        title: "Geografia — Geografia astronomica e orientamento: punti cardinali, coordinate geografiche, paralleli, meridiani, Equatore, Greenwich, latitudine, longitudine e fusi orari",
+        description:
+            "Orientamento sulla superficie terrestre, punti cardinali, reticolato geografico, paralleli e meridiani, Equatore e meridiano di Greenwich, latitudine e longitudine e funzionamento dei fusi orari.",
+        content: geografiaAstronomicaOrientamento,
+    },
+    {
+        id: "geografia-geografia-fisica",
+        area: "cultura-letteraria-storico-sociale-geografica",
+        areaTitle: "Cultura letteraria, storico-sociale e geografica",
+        number: 64,
+        title: "Geografia — Geografia fisica: montagne, colline, pianure, fiumi, laghi, mari, coste, bacini idrografici e clima",
+        description:
+            "Principali elementi della geografia fisica: montagne, colline e pianure, caratteristiche dei fiumi e dei laghi, mari e coste, bacini idrografici e fattori ed elementi che determinano il clima.",
+        content: geografiaFisica,
     },
 ];
 

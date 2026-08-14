@@ -65,6 +65,26 @@ function App() {
   ] = useState(simulations[0]?.id ?? "");
 
   const [
+    currentQuestions,
+    setCurrentQuestions,
+  ] = useState([]);
+
+  const [
+    loadedSimulationId,
+    setLoadedSimulationId,
+  ] = useState(null);
+
+  const [
+    isSimulationLoading,
+    setIsSimulationLoading,
+  ] = useState(false);
+
+  const [
+    simulationLoadError,
+    setSimulationLoadError,
+  ] = useState(false);
+
+  const [
     currentQuestionIndex,
     setCurrentQuestionIndex,
   ] = useState(0);
@@ -108,8 +128,7 @@ function App() {
         simulation.id === currentSimulationId,
     ) ?? simulations[0];
 
-  const currentQuestions =
-    currentSimulation?.questions ?? [];
+
 
   const currentQuestion =
     currentQuestions[currentQuestionIndex];
@@ -248,6 +267,68 @@ function App() {
   ]);
 
   useEffect(() => {
+    if (
+      currentPage !== "simulation" ||
+      !currentSimulation
+    ) {
+      return;
+    }
+
+    if (
+      loadedSimulationId ===
+      currentSimulation.id
+    ) {
+      setIsSimulationLoading(false);
+      return;
+    }
+
+    let ignore = false;
+
+    async function loadQuestions() {
+      setIsSimulationLoading(true);
+      setSimulationLoadError(false);
+      setCurrentQuestions([]);
+
+      try {
+        const questions =
+          await currentSimulation.loadQuestions();
+
+        if (!ignore) {
+          setCurrentQuestions(questions);
+          setLoadedSimulationId(
+            currentSimulation.id,
+          );
+        }
+      } catch (error) {
+        if (!ignore) {
+          console.error(
+            "Errore durante il caricamento della simulazione:",
+            error,
+          );
+
+          setCurrentQuestions([]);
+          setLoadedSimulationId(null);
+          setSimulationLoadError(true);
+        }
+      } finally {
+        if (!ignore) {
+          setIsSimulationLoading(false);
+        }
+      }
+    }
+
+    loadQuestions();
+
+    return () => {
+      ignore = true;
+    };
+  }, [
+    currentPage,
+    currentSimulation,
+    loadedSimulationId,
+  ]);
+
+  useEffect(() => {
     let title =
       "Simulazioni Test Scienze della Formazione Primaria 2026 | Quiz Gratis";
 
@@ -340,6 +421,10 @@ function App() {
     if (
       currentPage !== "simulation" ||
       isSubmitted ||
+      isSimulationLoading ||
+      loadedSimulationId !==
+      currentSimulationId ||
+      currentQuestions.length === 0 ||
       Object.keys(answers).length === 0
     ) {
       return;
@@ -376,6 +461,8 @@ function App() {
     currentSimulationId,
     currentQuestions.length,
     isSubmitted,
+    isSimulationLoading,
+    loadedSimulationId,
   ]);
 
   function handleStartSimulation(
@@ -811,6 +898,56 @@ function App() {
       </Suspense>
     );
   }
+  /* CARICAMENTO SIMULAZIONE */
+
+  if (
+    currentPage === "simulation" &&
+    simulationLoadError
+  ) {
+    return (
+      <main className="quiz-page">
+        <div className="quiz-container">
+          <h1 className="quiz-title">
+            Errore di caricamento
+          </h1>
+
+          <p>
+            Non è stato possibile caricare
+            questa simulazione.
+          </p>
+
+          <div className="quiz-actions">
+            <button
+              type="button"
+              onClick={handleBackHome}
+            >
+              ← Torna alla home
+            </button>
+          </div>
+        </div>
+      </main>
+    );
+  }
+
+  if (
+    currentPage === "simulation" &&
+    (
+      isSimulationLoading ||
+      loadedSimulationId !==
+      currentSimulationId
+    )
+  ) {
+    return (
+      <main className="quiz-page">
+        <div className="quiz-container">
+          <p>
+            Caricamento simulazione...
+          </p>
+        </div>
+      </main>
+    );
+  }
+
   /* CONFERMA CONSEGNA */
 
   if (isConfirmingSubmit) {
