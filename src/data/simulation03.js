@@ -1381,17 +1381,6 @@ const simulation03 = [
                     "Le graduatorie individuali sono realmente differenti. Per esempio l'elettore 1 preferisce A a C, mentre gli elettori 2 e 3 preferiscono C ad A.",
             },
         ],
-        resources: [
-            {
-                id: "preferenze-maggioranza-ciclica",
-                type: "diagram",
-                label: "Tabella delle preferenze e confronti a maggioranza",
-                src: `${import.meta.env.BASE_URL}resources/diagrams/preferenze-maggioranza-ciclica.png`,
-                alt: "Tre colonne con le graduatorie A B C, B C A e C A B e frecce dei confronti A batte B, B batte C, C batte A",
-                caption:
-                    "Lo schema consente di confrontare separatamente ogni coppia di alternative e osservare il ciclo prodotto dalla maggioranza.",
-            },
-        ],
     },
 
     {
@@ -1429,17 +1418,6 @@ const simulation03 = [
                 correct: true,
                 explanation:
                     "Nella quarta riga compaiono già 4, 3 e 1, quindi manca necessariamente 2. Il controllo sulla terza colonna conferma il risultato: 3, 1, 4, 2 contiene tutti i numeri da 1 a 4 una sola volta.",
-            },
-        ],
-        resources: [
-            {
-                id: "griglia-latina-quattro",
-                type: "diagram",
-                label: "Griglia logica 4×4",
-                src: `${import.meta.env.BASE_URL}resources/diagrams/griglia-latina-4x4.png`,
-                alt: "Griglia quattro per quattro con le righe 1 2 3 4, 3 4 1 2, 2 1 4 3 e 4 3 punto interrogativo 1",
-                caption:
-                    "La griglia rende visibili contemporaneamente i vincoli sulle righe e sulle colonne.",
             },
         ],
     },
@@ -2048,17 +2026,6 @@ const simulation03 = [
                     "Il metodo associato alla scienza galileiana combina esperienza controllata, formulazione di ipotesi e ragionamento matematico. La natura non viene soltanto osservata passivamente: viene interrogata attraverso esperimenti progettati per verificare relazioni precise.",
             },
         ],
-        resources: [
-            {
-                id: "metodo-galileiano",
-                type: "diagram",
-                label: "Schema del metodo scientifico galileiano",
-                src: `${import.meta.env.BASE_URL}resources/diagrams/metodo-galileiano-esperimento-matematica.png`,
-                alt: "Schema con osservazione, formulazione dell'ipotesi, deduzione matematica, esperimento e verifica dei risultati",
-                caption:
-                    "Il diagramma evidenzia l'integrazione tra osservazione, ipotesi, matematica ed esperimento nella nascita della scienza moderna.",
-            },
-        ],
     },
 
     {
@@ -2098,17 +2065,7 @@ const simulation03 = [
                     "Montesquieu non propone l'abolizione dello Stato o di ogni autorità politica. Il problema è organizzare e bilanciare il potere per impedirne l'uso arbitrario.",
             },
         ],
-        resources: [
-            {
-                id: "separazione-poteri-montesquieu",
-                type: "diagram",
-                label: "Separazione dei tre poteri",
-                src: `${import.meta.env.BASE_URL}resources/diagrams/separazione-poteri-montesquieu.png`,
-                alt: "Schema con potere legislativo, esecutivo e giudiziario rappresentati come funzioni distinte dello Stato",
-                caption:
-                    "Lo schema rende visibile la distinzione delle tre funzioni fondamentali e il principio di limitazione reciproca del potere.",
-            },
-        ],
+
     },
 
     {
@@ -2225,17 +2182,6 @@ const simulation03 = [
                 correct: true,
                 explanation:
                     "Il bipolarismo della Guerra fredda organizzò gran parte dell'Europa intorno a due blocchi contrapposti. La NATO costituì il principale sistema militare occidentale, mentre il Patto di Varsavia riunì l'URSS e vari Stati dell'Europa orientale.",
-            },
-        ],
-        resources: [
-            {
-                id: "europa-blocchi-guerra-fredda",
-                type: "map",
-                label: "Europa dei due blocchi durante la Guerra fredda",
-                src: `${import.meta.env.BASE_URL}resources/maps/europa-blocchi-guerra-fredda.png`,
-                alt: "Carta storica europea con paesi appartenenti alla NATO e al Patto di Varsavia durante la Guerra fredda",
-                caption:
-                    "La carta permette di visualizzare geograficamente la contrapposizione politico-militare tra blocco occidentale e blocco sovietico.",
             },
         ],
     },
@@ -2816,17 +2762,7 @@ const simulation03 = [
                     "I gameti possiedono un corredo cromosomico completo ma aploide. La fecondazione combina i due corredi parentali, non crea cromosomi dal nulla.",
             },
         ],
-        resources: [
-            {
-                id: "meiosi-diploide-aploide",
-                type: "diagram",
-                label: "Riduzione cromosomica durante la meiosi",
-                src: `${import.meta.env.BASE_URL}resources/diagrams/meiosi-diploide-aploide.png`,
-                alt: "Schema semplificato di una cellula diploide che attraverso la meiosi produce cellule aploidi e della successiva fecondazione che ristabilisce il numero diploide",
-                caption:
-                    "Lo schema evidenzia la riduzione del numero cromosomico nella meiosi e il suo ripristino attraverso la fecondazione.",
-            },
-        ],
+
     },
 
     {
@@ -2942,17 +2878,6 @@ const simulation03 = [
                 correct: false,
                 explanation:
                     "I prelievi tramite pozzi costituiscono una vera uscita dal sistema sotterraneo. La falda dipende dal bilancio tra ricarica, deflusso naturale e prelievi umani.",
-            },
-        ],
-        resources: [
-            {
-                id: "acquifero-pompaggio-falda",
-                type: "diagram",
-                label: "Acquifero, falda e pompaggio",
-                src: `${import.meta.env.BASE_URL}resources/diagrams/acquifero-pompaggio-falda.png`,
-                alt: "Sezione del sottosuolo con zona insatura, falda, acquifero, pozzo e abbassamento locale del livello dell'acqua dovuto al pompaggio",
-                caption:
-                    "Il diagramma mostra il rapporto tra ricarica dell'acquifero, livello della falda e prelievo attraverso un pozzo.",
             },
         ],
     },
@@ -3200,17 +3125,7 @@ const simulation03 = [
                     "La temperatura può influenzare la resistenza elettrica del filo e quindi, indirettamente, l'intensità della corrente. Non è però il meccanismo che determina l'inversione dei poli.",
             },
         ],
-        resources: [
-            {
-                id: "bobina-verso-corrente-campo",
-                type: "diagram",
-                label: "Corrente e polarità di una bobina",
-                src: `${import.meta.env.BASE_URL}resources/diagrams/bobina-corrente-poli-magnetici.png`,
-                alt: "Due bobine identiche con corrente nei versi opposti e poli nord e sud invertiti",
-                caption:
-                    "Lo schema mostra che invertendo il verso della corrente si inverte anche l'orientamento del campo magnetico.",
-            },
-        ],
+
     },
 
     {
@@ -3289,17 +3204,7 @@ const simulation03 = [
                     "L'atmosfera terrestre può influire sulla qualità delle osservazioni, ma non determina quale emisfero lunare è rivolto verso di noi. La causa è il rapporto tra rotazione e rivoluzione della Luna.",
             },
         ],
-        resources: [
-            {
-                id: "rotazione-sincrona-luna",
-                type: "diagram",
-                label: "Rotazione sincrona della Luna",
-                src: `${import.meta.env.BASE_URL}resources/diagrams/rotazione-sincrona-luna.png`,
-                alt: "Schema della Luna in diverse posizioni lungo l'orbita terrestre mostrando che ruota su se stessa mantenendo lo stesso emisfero rivolto verso la Terra",
-                caption:
-                    "Il diagramma permette di confrontare il moto orbitale della Luna con la sua rotazione sul proprio asse.",
-            },
-        ],
+
     },
 
     {
