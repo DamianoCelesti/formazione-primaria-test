@@ -180,6 +180,18 @@ import biologiaUmanaTessutiTegumentarioLocomotore from "../content/study/scienze
 
 import biologiaUmanaApparatoDigerenteNutrizione from "../content/study/scienze/biologia-umana-apparato-digerente-nutrizione.md?url&no-inline";
 
+import biologiaUmanaApparatoRespiratorioCircolatorio from "../content/study/scienze/biologia-umana-apparato-respiratorio-circolatorio.md?url&no-inline";
+
+import biologiaUmanaApparatoUrinarioOmeostasi from "../content/study/scienze/biologia-umana-apparato-urinario-omeostasi.md?url&no-inline";
+
+import biologiaUmanaSistemaNervosoOrganiSenso from "../content/study/scienze/biologia-umana-sistema-nervoso-organi-senso.md?url&no-inline";
+
+import biologiaUmanaSistemaEndocrinoOrmoni from "../content/study/scienze/biologia-umana-sistema-endocrino-ormoni.md?url&no-inline";
+
+import biologiaUmanaApparatoRiproduttoreSviluppo from "../content/study/scienze/biologia-umana-apparato-riproduttore-sviluppo.md?url&no-inline";
+
+import biologiaUmanaSistemaImmunitarioDifese from "../content/study/scienze/biologia-umana-sistema-immunitario-difese.md?url&no-inline";
+
 const studyTopics = [
     {
         id: "comprensione-del-testo",
@@ -1092,6 +1104,66 @@ const studyTopics = [
         description:
             "Principali nutrienti e loro funzioni, digestione meccanica e chimica, struttura e funzione degli organi dell'apparato digerente, ruolo di fegato, pancreas ed enzimi digestivi, assorbimento dei nutrienti, metabolismo e principi fondamentali di una corretta alimentazione.",
         content: biologiaUmanaApparatoDigerenteNutrizione,
+    },
+    {
+        id: "scienze-biologia-umana-apparato-respiratorio-circolatorio",
+        area: "cultura-matematico-scientifica",
+        areaTitle: "Cultura matematico-scientifica",
+        number: 93,
+        title: "Scienze — Biologia umana: apparato respiratorio e circolatorio: vie respiratorie, polmoni, alveoli, ventilazione polmonare, scambi gassosi, sangue, cuore, arterie, vene, capillari, piccola e grande circolazione, pressione arteriosa e trasporto di ossigeno e anidride carbonica",
+        description:
+            "Struttura e funzioni dell'apparato respiratorio e circolatorio, vie respiratorie, polmoni e alveoli, ventilazione e scambi gassosi, composizione del sangue, struttura del cuore e dei vasi sanguigni, piccola e grande circolazione, pressione arteriosa e trasporto dei gas respiratori.",
+        content: biologiaUmanaApparatoRespiratorioCircolatorio,
+    },
+    {
+        id: "scienze-biologia-umana-apparato-urinario-omeostasi",
+        area: "cultura-matematico-scientifica",
+        areaTitle: "Cultura matematico-scientifica",
+        number: 94,
+        title: "Scienze — Biologia umana: apparato urinario, escrezione e omeostasi: reni, nefrone, filtrazione glomerulare, riassorbimento e secrezione, formazione dell’urina, bilancio idrico e salino, ADH, aldosterone, regolazione del pH e principali funzioni omeostatiche",
+        description:
+            "Struttura e funzioni dell'apparato urinario, reni e nefroni, filtrazione glomerulare, riassorbimento e secrezione tubulare, formazione dell'urina, regolazione del bilancio idrico e salino, ruolo di ADH e aldosterone, controllo del pH e principali meccanismi di omeostasi.",
+        content: biologiaUmanaApparatoUrinarioOmeostasi,
+    },
+    {
+        id: "scienze-biologia-umana-sistema-nervoso-organi-senso",
+        area: "cultura-matematico-scientifica",
+        areaTitle: "Cultura matematico-scientifica",
+        number: 95,
+        title: "Scienze — Biologia umana: sistema nervoso e organi di senso: neuroni, impulso nervoso, potenziale d’azione, sinapsi, neurotrasmettitori, sistema nervoso centrale e periferico, cervello, cervelletto, midollo spinale, sistema autonomo, riflessi, occhio, orecchio, gusto, olfatto e sensibilità",
+        description:
+            "Struttura e funzionamento del sistema nervoso, neuroni, impulso nervoso, potenziale d’azione e sinapsi, organizzazione del sistema nervoso centrale e periferico, principali funzioni di cervello, cervelletto e midollo spinale, sistema autonomo, riflessi e funzionamento dei principali organi di senso.",
+        content: biologiaUmanaSistemaNervosoOrganiSenso,
+    },
+    {
+        id: "scienze-biologia-umana-sistema-endocrino-ormoni",
+        area: "cultura-matematico-scientifica",
+        areaTitle: "Cultura matematico-scientifica",
+        number: 96,
+        title: "Scienze — Biologia umana: sistema endocrino e ormoni: ghiandole endocrine, ipotalamo e ipofisi, tiroide, paratiroidi, pancreas endocrino, ghiandole surrenali, gonadi, feedback negativo, regolazione della glicemia, metabolismo, crescita, risposta allo stress e principali funzioni ormonali",
+        description:
+            "Organizzazione del sistema endocrino, principali ghiandole e ormoni, rapporti tra ipotalamo e ipofisi, funzioni di tiroide, paratiroidi, pancreas endocrino, surreni e gonadi, meccanismi di feedback negativo e regolazione ormonale di glicemia, metabolismo, crescita e risposta allo stress.",
+        content: biologiaUmanaSistemaEndocrinoOrmoni,
+    },
+    {
+        id: "scienze-biologia-umana-apparato-riproduttore-sviluppo",
+        area: "cultura-matematico-scientifica",
+        areaTitle: "Cultura matematico-scientifica",
+        number: 97,
+        title: "Scienze — Biologia umana: apparato riproduttore e sviluppo: apparato riproduttore maschile e femminile, spermatogenesi, ovogenesi, ciclo ovarico e mestruale, ovulazione, fecondazione, gravidanza, placenta, sviluppo embrionale e fetale, parto e principali basi della riproduzione umana",
+        description:
+            "Struttura e funzioni degli apparati riproduttori maschile e femminile, formazione dei gameti, ciclo ovarico e mestruale, ovulazione e fecondazione, gravidanza, ruolo della placenta, principali fasi dello sviluppo embrionale e fetale e parto.",
+        content: biologiaUmanaApparatoRiproduttoreSviluppo,
+    },
+    {
+        id: "scienze-biologia-umana-sistema-immunitario-difese",
+        area: "cultura-matematico-scientifica",
+        areaTitle: "Cultura matematico-scientifica",
+        number: 98,
+        title: "Scienze — Biologia umana: sistema immunitario e difese dell’organismo: immunità innata e adattativa, barriere esterne, infiammazione, fagocitosi, linfociti B e T, anticorpi, antigeni, memoria immunologica, vaccinazione, allergie, malattie autoimmuni e principali meccanismi di difesa",
+        description:
+            "Principali difese dell'organismo, immunità innata e adattativa, barriere esterne, risposta infiammatoria e fagocitosi, ruolo dei linfociti B e T, antigeni e anticorpi, memoria immunologica e vaccinazione, allergie, malattie autoimmuni e principali meccanismi della risposta immunitaria.",
+        content: biologiaUmanaSistemaImmunitarioDifese,
     },
 ];
 
