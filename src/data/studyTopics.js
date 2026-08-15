@@ -192,6 +192,16 @@ import biologiaUmanaApparatoRiproduttoreSviluppo from "../content/study/scienze/
 
 import biologiaUmanaSistemaImmunitarioDifese from "../content/study/scienze/biologia-umana-sistema-immunitario-difese.md?url&no-inline";
 
+import ecologiaEcosistemiRelazioniPopolazioni from "../content/study/scienze/ecologia-ecosistemi-relazioni-dinamica-popolazioni.md?url&no-inline";
+
+import scienzeTerraMineraliRocceCicloLitogenetico from "../content/study/scienze/scienze-terra-minerali-rocce-ciclo-litogenetico.md?url&no-inline";
+
+import scienzeTerraAtmosferaMeteorologiaClima from "../content/study/scienze/scienze-terra-atmosfera-meteorologia-clima.md?url&no-inline";
+
+import scienzeTerraIdrosferaCicloAcqua from "../content/study/scienze/scienze-terra-idrosfera-ciclo-acqua.md?url&no-inline";
+
+import astronomiaSistemaSolareUniverso from "../content/study/scienze/astronomia-sistema-solare-universo.md?url&no-inline";
+
 const studyTopics = [
     {
         id: "comprensione-del-testo",
@@ -1164,6 +1174,56 @@ const studyTopics = [
         description:
             "Principali difese dell'organismo, immunità innata e adattativa, barriere esterne, risposta infiammatoria e fagocitosi, ruolo dei linfociti B e T, antigeni e anticorpi, memoria immunologica e vaccinazione, allergie, malattie autoimmuni e principali meccanismi della risposta immunitaria.",
         content: biologiaUmanaSistemaImmunitarioDifese,
+    },
+    {
+        id: "scienze-ecologia-ecosistemi-relazioni-popolazioni",
+        area: "cultura-matematico-scientifica",
+        areaTitle: "Cultura matematico-scientifica",
+        number: 99,
+        title: "Scienze — Ecologia: ecosistemi, habitat e nicchia ecologica, fattori biotici e abiotici, popolazioni e comunità, catene e reti alimentari, livelli trofici, produttori, consumatori e decompositori, flusso di energia, piramidi ecologiche, cicli della materia, relazioni tra organismi e dinamica delle popolazioni",
+        description:
+            "Concetti fondamentali dell'ecologia: ecosistemi, habitat e nicchia ecologica, fattori biotici e abiotici, popolazioni e comunità, catene e reti alimentari, livelli trofici, flusso di energia, piramidi ecologiche, cicli della materia, relazioni tra organismi e dinamica delle popolazioni.",
+        content: ecologiaEcosistemiRelazioniPopolazioni,
+    },
+    {
+        id: "scienze-terra-minerali-rocce-ciclo-litogenetico",
+        area: "cultura-matematico-scientifica",
+        areaTitle: "Cultura matematico-scientifica",
+        number: 101,
+        title: "Scienze della Terra — Minerali, rocce e ciclo delle rocce: minerali, proprietà fisiche, rocce magmatiche intrusive ed effusive, rocce sedimentarie, rocce metamorfiche, magma, cristallizzazione, erosione, trasporto, sedimentazione, diagenesi, metamorfismo e ciclo litogenetico",
+        description:
+            "Minerali e loro principali proprietà fisiche, classificazione delle rocce magmatiche, sedimentarie e metamorfiche, formazione delle rocce attraverso cristallizzazione, erosione, trasporto, sedimentazione, diagenesi e metamorfismo e funzionamento del ciclo litogenetico.",
+        content: scienzeTerraMineraliRocceCicloLitogenetico,
+    },
+    {
+        id: "scienze-terra-atmosfera-meteorologia-clima",
+        area: "cultura-matematico-scientifica",
+        areaTitle: "Cultura matematico-scientifica",
+        number: 102,
+        title: "Scienze della Terra — Atmosfera, meteorologia e clima: composizione e struttura dell’atmosfera, troposfera, stratosfera e ozono, pressione atmosferica, temperatura, umidità, nuvole e precipitazioni, venti, masse d’aria, fronti, cicloni e anticicloni, tempo meteorologico, clima, effetto serra e cambiamento climatico",
+        description:
+            "Composizione e struttura dell'atmosfera, troposfera e stratosfera, ruolo dell'ozono, pressione, temperatura e umidità atmosferica, formazione di nuvole e precipitazioni, venti, masse d'aria e fronti, cicloni e anticicloni, differenza tra tempo e clima, effetto serra e cambiamento climatico.",
+        content: scienzeTerraAtmosferaMeteorologiaClima,
+    },
+    {
+        id: "scienze-terra-idrosfera-ciclo-acqua",
+        area: "cultura-matematico-scientifica",
+        areaTitle: "Cultura matematico-scientifica",
+        number: 103,
+        title: "Scienze della Terra — Idrosfera e ciclo dell’acqua: oceani e mari, acque continentali, fiumi, laghi, falde acquifere, ghiacciai, salinità, correnti marine, onde e maree, ciclo idrologico, erosione fluviale e glaciale, disponibilità di acqua dolce e principali problemi legati alle risorse idriche",
+        description:
+            "Caratteristiche dell'idrosfera terrestre, oceani e mari, acque continentali, fiumi, laghi, falde e ghiacciai, salinità, correnti marine, onde e maree, ciclo idrologico, erosione fluviale e glaciale, distribuzione dell'acqua dolce e principali problemi legati alla gestione delle risorse idriche.",
+        content: scienzeTerraIdrosferaCicloAcqua,
+    },
+    {
+        id: "scienze-astronomia-sistema-solare-universo",
+        area: "cultura-matematico-scientifica",
+        areaTitle: "Cultura matematico-scientifica",
+        number: 104,
+        title: "Scienze — Astronomia: Sistema Solare, Sole, pianeti terrestri e giganti, satelliti, asteroidi e comete, leggi di Keplero, gravità, rotazione e rivoluzione terrestre, giorno e anno, stagioni, Luna e sue fasi, eclissi, stelle, galassie e struttura generale dell’Universo",
+        description:
+            "Struttura del Sistema Solare, caratteristiche del Sole e dei pianeti terrestri e giganti, satelliti, asteroidi e comete, leggi di Keplero e gravità, moti della Terra e loro conseguenze, stagioni, Luna, fasi ed eclissi, stelle, galassie e organizzazione generale dell'Universo.",
+        content: astronomiaSistemaSolareUniverso,
     },
 ];
 
