@@ -613,17 +613,6 @@ const simulation02 = [
                     "La seconda parte rovescia l'ordine degli elementi della prima: «persone → regole» diventa «regole → persone». Questa disposizione incrociata, schematizzabile come AB-BA, è caratteristica del chiasmo.",
             },
         ],
-        resources: [
-            {
-                id: "schema-chiasmo-abba",
-                type: "diagram",
-                label: "Schema della struttura del chiasmo",
-                src: `${import.meta.env.BASE_URL}resources/diagrams/chiasmo-struttura-abba.png`,
-                alt: "Schema AB-BA che mostra l'inversione incrociata degli elementi persone e regole",
-                caption:
-                    "Il diagramma rende visibile la disposizione incrociata AB-BA tipica del chiasmo.",
-            },
-        ],
     },
 
     {
@@ -1686,17 +1675,7 @@ const simulation02 = [
                     "Ariosto conduce contemporaneamente numerose vicende e passa frequentemente dall'una all'altra, lasciando temporaneamente in sospeso personaggi e azioni. Questa tecnica mantiene vivo l'interesse del lettore e contribuisce alla struttura aperta e dinamica dell'Orlando furioso.",
             },
         ],
-        resources: [
-            {
-                id: "orlando-furioso-entrelacement",
-                type: "diagram",
-                label: "Schema dell'entrelacement nell'Orlando furioso",
-                src: `${import.meta.env.BASE_URL}resources/diagrams/orlando-furioso-entrelacement.png`,
-                alt: "Schema con più fili narrativi dell'Orlando furioso che vengono interrotti, alternati e successivamente ripresi",
-                caption:
-                    "Lo schema visualizza il passaggio del narratore da una vicenda all'altra e la successiva ripresa dei fili narrativi sospesi.",
-            },
-        ],
+
     },
 
     {
@@ -1853,17 +1832,6 @@ const simulation02 = [
                     "La «vita» tende al movimento e alla trasformazione, mentre la «forma» fissa l'individuo in un ruolo, una definizione o una maschera. Questo contrasto è alla base di molte situazioni pirandelliane e della crisi dell'idea di identità unitaria.",
             },
         ],
-        resources: [
-            {
-                id: "pirandello-vita-forma",
-                type: "diagram",
-                label: "Schema concettuale vita-forma in Pirandello",
-                src: `${import.meta.env.BASE_URL}resources/diagrams/pirandello-vita-forma.png`,
-                alt: "Schema che confronta il fluire mutevole della vita con forme, ruoli e maschere sociali",
-                caption:
-                    "Lo schema collega il concetto di vita mutevole alle forme e alle maschere che fissano l'individuo in identità rigide.",
-            },
-        ],
     },
 
     {
@@ -1940,17 +1908,6 @@ const simulation02 = [
                 correct: false,
                 explanation:
                     "L'unificazione tedesca e quella italiana sarebbero avvenute molti decenni dopo e attraverso processi politici e militari autonomi. Nel 1815 la penisola italiana e l'area tedesca restarono politicamente frammentate.",
-            },
-        ],
-        resources: [
-            {
-                id: "europa-congresso-vienna",
-                type: "map",
-                label: "Carta politica dell'Europa dopo il Congresso di Vienna",
-                src: `${import.meta.env.BASE_URL}resources/maps/europa-congresso-vienna-1815.png`,
-                alt: "Carta politica dell'Europa dopo il Congresso di Vienna del 1815",
-                caption:
-                    "La carta permette di osservare la riorganizzazione territoriale europea e la frammentazione politica delle aree italiana e tedesca.",
             },
         ],
     },
@@ -2068,17 +2025,6 @@ const simulation02 = [
                 correct: false,
                 explanation:
                     "L'artiglieria fu una delle armi centrali della Prima guerra mondiale e venne impiegata in quantità enormi. Nonostante bombardamenti intensi, le difese potevano sopravvivere e le truppe attaccanti restavano vulnerabili durante l'avanzata.",
-            },
-        ],
-        resources: [
-            {
-                id: "fronte-occidentale-trincee",
-                type: "diagram",
-                label: "Schema di un sistema di trincee della Prima guerra mondiale",
-                src: `${import.meta.env.BASE_URL}resources/diagrams/prima-guerra-mondiale-trincee.png`,
-                alt: "Schema con trincee contrapposte, terra di nessuno, reticolati e postazioni difensive",
-                caption:
-                    "Lo schema evidenzia le caratteristiche che rendevano difficile un attacco frontale contro un sistema difensivo fortificato.",
             },
         ],
     },
@@ -2237,17 +2183,7 @@ const simulation02 = [
                     "La Corte di giustizia interpreta il diritto dell'Unione e garantisce il rispetto dei trattati nelle controversie di sua competenza. Non è l'organo che ordinariamente propone e approva gli atti legislativi europei.",
             },
         ],
-        resources: [
-            {
-                id: "istituzioni-ue-procedimento-legislativo",
-                type: "diagram",
-                label: "Schema semplificato del procedimento legislativo ordinario dell'UE",
-                src: `${import.meta.env.BASE_URL}resources/diagrams/ue-procedimento-legislativo.png`,
-                alt: "Schema con Commissione europea che presenta una proposta e Parlamento europeo e Consiglio dell'Unione europea che partecipano alla sua approvazione",
-                caption:
-                    "Lo schema aiuta a distinguere il ruolo della Commissione da quello dei due colegislatori nel procedimento legislativo ordinario.",
-            },
-        ],
+
     },
 
     {
@@ -2385,17 +2321,6 @@ const simulation02 = [
                 correct: true,
                 explanation:
                     "La base stretta indica che le generazioni più giovani sono relativamente poco numerose, mentre la presenza consistente di anziani segnala una struttura demografica invecchiata. Questo profilo è frequente nelle popolazioni con natalità bassa e lunga speranza di vita.",
-            },
-        ],
-        resources: [
-            {
-                id: "piramide-eta-invecchiamento",
-                type: "diagram",
-                label: "Piramide delle età di una popolazione invecchiata",
-                src: `${import.meta.env.BASE_URL}resources/diagrams/piramide-eta-invecchiamento.png`,
-                alt: "Piramide demografica con base stretta, fasce adulte più ampie e consistente quota di popolazione anziana",
-                caption:
-                    "La forma evidenzia la ridotta consistenza delle generazioni giovani rispetto alle fasce adulte e anziane.",
             },
         ],
     },
@@ -2692,17 +2617,6 @@ const simulation02 = [
                     "5,4 cm si ottengono applicando il rapporto inverso 6/10 al lato di 9 cm. Il secondo triangolo è invece più grande del primo, quindi anche il lato A'C' deve essere maggiore di 9 cm.",
             },
         ],
-        resources: [
-            {
-                id: "triangoli-simili-proporzioni",
-                type: "diagram",
-                label: "Triangoli simili e lati corrispondenti",
-                src: `${import.meta.env.BASE_URL}resources/diagrams/triangoli-simili-6-10-9.png`,
-                alt: "Due triangoli simili con lati corrispondenti AB 6 centimetri, A'B' 10 centimetri, AC 9 centimetri e A'C' incognito",
-                caption:
-                    "Lo schema rende immediatamente riconoscibili i lati corrispondenti ai quali applicare lo stesso fattore di scala.",
-            },
-        ],
     },
 
     {
@@ -2859,17 +2773,6 @@ const simulation02 = [
                     "L'alternativa utilizza valori vicini alle differenze tra le coordinate invece delle loro medie. Il punto medio deve trovarsi esattamente a metà del segmento AB.",
             },
         ],
-        resources: [
-            {
-                id: "punto-medio-cartesiano",
-                type: "diagram",
-                label: "Segmento nel piano cartesiano e punto medio",
-                src: `${import.meta.env.BASE_URL}resources/diagrams/punto-medio-a-b-cartesiano.png`,
-                alt: "Piano cartesiano con A meno tre quattro, B cinque meno due e il punto medio del segmento",
-                caption:
-                    "Il grafico permette di verificare geometricamente che il punto (1,1) si trova a metà tra i due estremi.",
-            },
-        ],
     },
 
     {
@@ -2948,17 +2851,6 @@ const simulation02 = [
                     "La luce fornisce energia sotto forma di radiazione elettromagnetica, non atomi di carbonio. Energia e materia svolgono ruoli differenti nel processo fotosintetico.",
             },
         ],
-        resources: [
-            {
-                id: "fotosintesi-flussi-materia",
-                type: "diagram",
-                label: "Schema essenziale della fotosintesi",
-                src: `${import.meta.env.BASE_URL}resources/diagrams/fotosintesi-co2-acqua-luce.png`,
-                alt: "Schema di una pianta con ingresso di anidride carbonica, acqua e luce e produzione di materia organica e ossigeno",
-                caption:
-                    "Lo schema distingue la fonte del carbonio, la fonte di acqua e la fonte energetica utilizzate nella fotosintesi.",
-            },
-        ],
     },
 
     {
@@ -2996,17 +2888,6 @@ const simulation02 = [
                 correct: false,
                 explanation:
                     "Nel cuore adulto normale non esiste questo percorso diretto. Il sangue passa dall'atrio destro al ventricolo destro e da lì viene inviato ai polmoni prima di tornare al lato sinistro.",
-            },
-        ],
-        resources: [
-            {
-                id: "circolazione-polmonare",
-                type: "diagram",
-                label: "Schema della piccola circolazione",
-                src: `${import.meta.env.BASE_URL}resources/diagrams/circolazione-polmonare-cuore.png`,
-                alt: "Schema del cuore con ventricolo destro, arteria polmonare, polmoni, vene polmonari e atrio sinistro",
-                caption:
-                    "Il diagramma evidenzia la direzione del flusso sanguigno tra cuore e polmoni.",
             },
         ],
     },
@@ -3087,17 +2968,7 @@ const simulation02 = [
                     "La capacità portante dipende dalle caratteristiche dell'ambiente e dalle risorse disponibili, non cresce automaticamente insieme al numero degli individui. Può cambiare nel tempo, ma per cause ecologiche specifiche.",
             },
         ],
-        resources: [
-            {
-                id: "crescita-logistica-popolazione",
-                type: "diagram",
-                label: "Curva di crescita logistica",
-                src: `${import.meta.env.BASE_URL}resources/diagrams/crescita-logistica-capacita-portante.png`,
-                alt: "Grafico a forma di S di una popolazione che cresce e tende verso una linea orizzontale indicante la capacità portante",
-                caption:
-                    "La curva mostra il rallentamento della crescita quando la popolazione si avvicina alla capacità portante dell'ambiente.",
-            },
-        ],
+
     },
 
     {
@@ -3354,17 +3225,7 @@ const simulation02 = [
                     "Le due fasi corrispondono invece a configurazioni opposte: alla Luna nuova la Luna si trova approssimativamente nella direzione del Sole, mentre alla Luna piena si trova dalla parte opposta del cielo. Questa differenza è proprio ciò che rende possibili rispettivamente eclissi solari e lunari quando l'allineamento è abbastanza preciso.",
             },
         ],
-        resources: [
-            {
-                id: "orbita-lunare-nodi-eclissi",
-                type: "diagram",
-                label: "Inclinazione dell'orbita lunare ed eclissi",
-                src: `${import.meta.env.BASE_URL}resources/diagrams/orbita-lunare-nodi-eclissi.png`,
-                alt: "Schema del piano dell'eclittica e del piano orbitale lunare inclinato con linea dei nodi",
-                caption:
-                    "Il diagramma mostra perché l'allineamento necessario alle eclissi avviene soltanto quando la Luna si trova vicino ai nodi della propria orbita.",
-            },
-        ],
+
     },
 ];
 
