@@ -2148,17 +2148,7 @@ const simulation03 = [
                     "La proprietà era invece inclusa tra i diritti tutelati dalla Dichiarazione. Il documento non progettava l'abolizione generale della proprietà privata.",
             },
         ],
-        resources: [
-            {
-                id: "rivoluzione-francese-agosto-1789",
-                type: "timeline",
-                label: "Agosto 1789 e crisi dell'Ancien Régime",
-                src: `${import.meta.env.BASE_URL}resources/diagrams/rivoluzione-francese-agosto-1789.png`,
-                alt: "Linea del tempo con abolizione dei privilegi feudali il 4 agosto 1789 e Dichiarazione dei diritti dell'uomo e del cittadino il 26 agosto 1789",
-                caption:
-                    "La linea del tempo collega i due principali provvedimenti dell'agosto 1789 al progressivo superamento dell'ordine politico e sociale dell'Ancien Régime.",
-            },
-        ],
+
     },
 
     {
