@@ -995,7 +995,6 @@
         padding: 24px 20px;
     }
 
-    .review-card,
     .submit-confirmation,
     .results-summary {
         border-radius: 16px;
@@ -1270,3 +1269,66 @@
         padding-left: 14px;
     }
 }
+
+/* Superfici e stati del flusso di simulazione. */
+.quiz-page {
+    background: linear-gradient(180deg, #eff5ff 0, var(--color-page) 320px);
+    color: var(--color-text);
+}
+
+.quiz-title,
+.question-text,
+.question-navigation h2,
+.submit-confirmation__header h2,
+.results-summary__header h2 { color: var(--color-text); }
+
+.quiz-progress,
+.question-number,
+.submit-confirmation__header > p:last-child,
+.results-summary__header > p:last-child { color: var(--color-text-muted); }
+
+.question-navigation,
+.question-card,
+.submit-confirmation,
+.results-summary {
+    border-color: var(--color-border);
+    box-shadow: var(--shadow-sm);
+}
+
+.question-navigator__button--answered {
+    background: var(--color-success-bg);
+    border-color: #a8ddbe;
+    color: var(--color-success);
+}
+
+.question-navigator__button--current,
+.quiz-submit-button,
+.submit-confirmation__confirm,
+.results-summary__review {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+.question-navigator__button--current:hover,
+.quiz-submit-button:hover,
+.submit-confirmation__confirm:hover,
+.results-summary__review:hover { background: var(--color-accent-hover); }
+
+.answer-option {
+    border-color: var(--color-border);
+    transition: background 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease;
+}
+
+.answer-option:hover { border-color: var(--color-accent); background: var(--color-surface-accent); }
+
+.answer-option:has(input:checked) {
+    border-color: var(--color-accent);
+    background: var(--color-surface-accent);
+    box-shadow: inset 4px 0 0 var(--color-accent);
+}
+
+.submit-warning { background: var(--color-warning-bg); border-color: #f1d28a; }
+.submit-missing { background: var(--color-danger-bg); border-color: #f0b7b2; }
+.submit-complete { background: var(--color-success-bg); border-color: #a8ddbe; }
+
+.results-summary__notice { background: var(--color-surface-accent); border-color: #cbdcf8; }

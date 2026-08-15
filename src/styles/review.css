@@ -868,3 +868,64 @@
         left: 26px;
     }
 }
+
+/* Revisione: stati leggibili anche senza affidarsi solo al colore. */
+.review-header h2,
+.review-question,
+.review-resources__header h4,
+.review-resource--visual h5,
+.review-resource--timeline h5 { color: var(--color-text); }
+
+.review-header > p:last-child,
+.review-option p,
+.review-resource__content span,
+.review-resource--visual figcaption { color: var(--color-text-muted); }
+
+.review-card,
+.review-option,
+.review-resource { border-color: var(--color-border); }
+
+.review-card { box-shadow: var(--shadow-sm); }
+
+.review-card--correct { border-top-color: var(--color-success); }
+.review-card--wrong { border-top-color: var(--color-danger); }
+
+.review-card__status--correct,
+.review-answer-box--correct,
+.review-option--correct {
+    background: var(--color-success-bg);
+    border-color: #a8ddbe;
+    color: var(--color-success);
+}
+
+.review-card__status--wrong,
+.review-answer-box--wrong,
+.review-option--selected-wrong {
+    background: var(--color-danger-bg);
+    border-color: #f0b7b2;
+    color: var(--color-danger);
+}
+
+.review-option--correct::before,
+.review-option--selected-wrong::before {
+    display: inline-block;
+    margin-right: 8px;
+    font-weight: 800;
+}
+
+.review-option--correct::before { content: "✓ Corretta"; }
+.review-option--selected-wrong::before { content: "! Risposta selezionata"; }
+
+.review-resource--link:focus-visible,
+.review-footer button:focus-visible { outline: none; box-shadow: var(--focus-ring); }
+
+.review-footer button {
+    border-color: var(--color-border-strong);
+    transition: border-color 0.16s ease, color 0.16s ease, background 0.16s ease;
+}
+
+.review-footer button:hover {
+    border-color: var(--color-accent);
+    background: var(--color-surface-accent);
+    color: var(--color-accent);
+}
