@@ -154,6 +154,32 @@ import pianoCartesianoFunzioniGrafici from "../content/study/matematica/piano-ca
 
 import statisticaProbabilita from "../content/study/matematica/statistica-probabilita.md?url&no-inline";
 
+import metodoScientificoGrandezzeMisure from "../content/study/scienze/metodo-scientifico-grandezze-misure.md?url&no-inline";
+
+import fisicaMovimentoForze from "../content/study/scienze/fisica-movimento-forze.md?url&no-inline";
+
+import fisicaLavoroEnergiaPotenza from "../content/study/scienze/fisica-lavoro-energia-potenza.md?url&no-inline";
+
+import fisicaTemperaturaCaloreStatiMateria from "../content/study/scienze/fisica-temperatura-calore-stati-materia.md?url&no-inline";
+
+import fisicaElettricitaMagnetismo from "../content/study/scienze/fisica-elettricita-magnetismo.md?url&no-inline";
+
+import fisicaOndeSuonoLuce from "../content/study/scienze/fisica-onde-suono-luce.md?url&no-inline";
+
+import chimicaMateriaAtomiElementi from "../content/study/scienze/chimica-materia-atomi-elementi.md?url&no-inline";
+
+import chimicaLegamiReazioni from "../content/study/scienze/chimica-legami-reazioni.md?url&no-inline";
+
+import biologiaCaratteristicheVitaCellule from "../content/study/scienze/biologia-caratteristiche-vita-cellule.md?url&no-inline";
+
+import biologiaBiomolecoleGeneticaMolecolare from "../content/study/scienze/biologia-biomolecole-genetica-molecolare.md?url&no-inline";
+
+import biologiaEvoluzioneClassificazioneViventi from "../content/study/scienze/biologia-evoluzione-classificazione-viventi.md?url&no-inline";
+
+import biologiaUmanaTessutiTegumentarioLocomotore from "../content/study/scienze/biologia-umana-tessuti-tegumentario-locomotore.md?url&no-inline";
+
+import biologiaUmanaApparatoDigerenteNutrizione from "../content/study/scienze/biologia-umana-apparato-digerente-nutrizione.md?url&no-inline";
+
 const studyTopics = [
     {
         id: "comprensione-del-testo",
@@ -936,6 +962,136 @@ const studyTopics = [
         description:
             "Concetti fondamentali di statistica e probabilità: popolazione e campione, frequenze assolute e relative, media, mediana, moda e campo di variazione, organizzazione e interpretazione dei dati tramite tabelle e grafici, eventi, spazio campionario e calcolo della probabilità.",
         content: statisticaProbabilita,
+    },
+    {
+        id: "scienze-metodo-scientifico-grandezze-misure",
+        area: "cultura-matematico-scientifica",
+        areaTitle: "Cultura matematico-scientifica",
+        number: 79,
+        title: "Scienze — Metodo scientifico, grandezze fisiche e misure: osservazione, ipotesi, esperimento, teoria scientifica, Sistema Internazionale, grandezze fondamentali e derivate, unità di misura, strumenti, precisione, accuratezza, errore e notazione scientifica",
+        description:
+            "Metodo scientifico e sue fasi, osservazione, formulazione delle ipotesi ed esperimento, significato di teoria scientifica, grandezze fisiche fondamentali e derivate, Sistema Internazionale, strumenti di misura, precisione, accuratezza, errori di misura e notazione scientifica.",
+        content: metodoScientificoGrandezzeMisure,
+    },
+    {
+        id: "scienze-fisica-movimento-forze",
+        area: "cultura-matematico-scientifica",
+        areaTitle: "Cultura matematico-scientifica",
+        number: 80,
+        title: "Scienze — Fisica: movimento e forze: posizione, distanza, spostamento, velocità, accelerazione, moto rettilineo uniforme, moto accelerato, inerzia, principi della dinamica, massa, peso, gravità, attrito e principali forze",
+        description:
+            "Concetti fondamentali della meccanica: posizione, distanza e spostamento, velocità e accelerazione, moto rettilineo uniforme e accelerato, inerzia e principi della dinamica, differenza tra massa e peso, gravità, attrito e principali forze.",
+        content: fisicaMovimentoForze,
+    },
+    {
+        id: "scienze-fisica-lavoro-energia-potenza",
+        area: "cultura-matematico-scientifica",
+        areaTitle: "Cultura matematico-scientifica",
+        number: 81,
+        title: "Scienze — Fisica: lavoro, energia e potenza: lavoro di una forza, energia cinetica e potenziale, energia meccanica, conservazione dell’energia, trasformazioni energetiche, rendimento, potenza e principali applicazioni",
+        description:
+            "Lavoro compiuto da una forza, energia cinetica e potenziale, energia meccanica e sua conservazione, trasformazioni dell’energia, rendimento energetico, potenza e principali applicazioni dei concetti di lavoro ed energia.",
+        content: fisicaLavoroEnergiaPotenza,
+    },
+    {
+        id: "scienze-fisica-temperatura-calore-stati-materia",
+        area: "cultura-matematico-scientifica",
+        areaTitle: "Cultura matematico-scientifica",
+        number: 82,
+        title: "Scienze — Fisica: temperatura, calore e stati della materia: temperatura e agitazione termica, scale termometriche, equilibrio termico, calore, capacità termica e calore specifico, dilatazione termica, conduzione, convezione, irraggiamento, passaggi di stato e calore latente",
+        description:
+            "Temperatura e agitazione termica delle particelle, scale termometriche ed equilibrio termico, differenza tra temperatura e calore, capacità termica e calore specifico, dilatazione termica, modalità di propagazione del calore, stati della materia, passaggi di stato e calore latente.",
+        content: fisicaTemperaturaCaloreStatiMateria,
+    },
+    {
+        id: "scienze-fisica-elettricita-magnetismo",
+        area: "cultura-matematico-scientifica",
+        areaTitle: "Cultura matematico-scientifica",
+        number: 83,
+        title: "Scienze — Fisica: elettricità e magnetismo: carica elettrica, struttura elettrica della materia, elettrizzazione, conduttori e isolanti, corrente, tensione, resistenza, legge di Ohm, circuiti in serie e parallelo, potenza elettrica, magneti, campo magnetico ed elettromagnetismo",
+        description:
+            "Carica elettrica e struttura elettrica della materia, modalità di elettrizzazione, conduttori e isolanti, corrente, tensione e resistenza, legge di Ohm, circuiti elettrici in serie e in parallelo, potenza elettrica, magneti, campo magnetico e principali fenomeni elettromagnetici.",
+        content: fisicaElettricitaMagnetismo,
+    },
+    {
+        id: "scienze-fisica-onde-suono-luce",
+        area: "cultura-matematico-scientifica",
+        areaTitle: "Cultura matematico-scientifica",
+        number: 84,
+        title: "Scienze — Fisica: onde, suono e luce: caratteristiche delle onde, frequenza, periodo, lunghezza d’onda, velocità di propagazione, onde trasversali e longitudinali, suono, intensità e altezza, spettro elettromagnetico, riflessione, rifrazione, lenti e principali fenomeni ottici",
+        description:
+            "Caratteristiche fondamentali delle onde, frequenza, periodo, lunghezza d’onda e velocità di propagazione, onde trasversali e longitudinali, proprietà del suono, spettro elettromagnetico, riflessione e rifrazione della luce, lenti e principali fenomeni ottici.",
+        content: fisicaOndeSuonoLuce,
+    },
+    {
+        id: "scienze-chimica-materia-atomi-elementi",
+        area: "cultura-matematico-scientifica",
+        areaTitle: "Cultura matematico-scientifica",
+        number: 85,
+        title: "Scienze — Chimica: materia, atomi ed elementi: struttura dell’atomo, numero atomico e numero di massa, isotopi, ioni, elementi chimici, tavola periodica, metalli e non metalli, molecole, sostanze pure, miscugli e principali metodi di separazione",
+        description:
+            "Struttura dell’atomo, numero atomico e numero di massa, isotopi e ioni, elementi chimici e organizzazione della tavola periodica, distinzione tra metalli e non metalli, molecole, sostanze pure e miscugli e principali tecniche di separazione.",
+        content: chimicaMateriaAtomiElementi,
+    },
+    {
+        id: "scienze-chimica-legami-reazioni",
+        area: "cultura-matematico-scientifica",
+        areaTitle: "Cultura matematico-scientifica",
+        number: 86,
+        title: "Scienze — Chimica: legami e reazioni chimiche: elettroni di valenza, legame ionico, covalente e metallico, polarità, formule chimiche, reagenti e prodotti, equazioni chimiche, bilanciamento, conservazione della massa, principali tipi di reazione, acidi, basi e pH",
+        description:
+            "Elettroni di valenza e principali legami chimici, polarità delle molecole, formule chimiche, reagenti e prodotti, equazioni e bilanciamento delle reazioni, conservazione della massa, principali tipi di reazione e caratteristiche fondamentali di acidi, basi e pH.",
+        content: chimicaLegamiReazioni,
+    },
+    {
+        id: "scienze-biologia-caratteristiche-vita-cellule",
+        area: "cultura-matematico-scientifica",
+        areaTitle: "Cultura matematico-scientifica",
+        number: 87,
+        title: "Scienze — Biologia: caratteristiche della vita e cellule: organizzazione dei viventi, teoria cellulare, cellule procariotiche ed eucariotiche, membrana plasmatica, citoplasma, nucleo, organuli cellulari, cellule animali e vegetali, trasporto attraverso la membrana e metabolismo cellulare",
+        description:
+            "Caratteristiche fondamentali degli organismi viventi, livelli di organizzazione biologica e teoria cellulare, differenze tra cellule procariotiche ed eucariotiche, struttura e funzione dei principali organuli, confronto tra cellule animali e vegetali, trasporto attraverso la membrana e concetti fondamentali del metabolismo cellulare.",
+        content: biologiaCaratteristicheVitaCellule,
+    },
+    {
+        id: "scienze-biologia-biomolecole-genetica-molecolare",
+        area: "cultura-matematico-scientifica",
+        areaTitle: "Cultura matematico-scientifica",
+        number: 88,
+        title: "Scienze — Biologia: biomolecole e genetica molecolare: acqua e sali minerali, carboidrati, lipidi, proteine, acidi nucleici, DNA e RNA, nucleotidi, duplicazione del DNA, geni, codice genetico, trascrizione, traduzione e sintesi delle proteine",
+        description:
+            "Principali biomolecole degli organismi viventi, ruolo di acqua e sali minerali, struttura e funzione di carboidrati, lipidi, proteine e acidi nucleici, DNA e RNA, nucleotidi, duplicazione del DNA, geni, codice genetico, trascrizione, traduzione e sintesi proteica.",
+        content: biologiaBiomolecoleGeneticaMolecolare,
+    },
+    {
+        id: "scienze-biologia-evoluzione-classificazione-viventi",
+        area: "cultura-matematico-scientifica",
+        areaTitle: "Cultura matematico-scientifica",
+        number: 90,
+        title: "Scienze — Biologia: evoluzione e classificazione dei viventi: teoria dell’evoluzione, selezione naturale, adattamento, variabilità, speciazione, prove dell’evoluzione, classificazione biologica, specie, nomenclatura binomiale, domini e principali gruppi di organismi",
+        description:
+            "Teoria dell’evoluzione e selezione naturale, variabilità e adattamento, formazione di nuove specie e principali prove dell’evoluzione, criteri della classificazione biologica, concetto di specie, nomenclatura binomiale, domini e principali gruppi degli organismi viventi.",
+        content: biologiaEvoluzioneClassificazioneViventi,
+    },
+    {
+        id: "scienze-biologia-umana-tessuti-tegumentario-locomotore",
+        area: "cultura-matematico-scientifica",
+        areaTitle: "Cultura matematico-scientifica",
+        number: 91,
+        title: "Scienze — Biologia umana: tessuti, apparato tegumentario e apparato locomotore: tessuto epiteliale, connettivo, muscolare e nervoso, pelle, ossa, articolazioni, muscoli, scheletro assile e appendicolare, movimento e principali funzioni di sostegno e protezione",
+        description:
+            "Principali tessuti dell'organismo umano, struttura e funzioni dell'apparato tegumentario, organizzazione dello scheletro assile e appendicolare, caratteristiche di ossa, articolazioni e muscoli e loro ruolo nel sostegno, nella protezione e nel movimento.",
+        content: biologiaUmanaTessutiTegumentarioLocomotore,
+    },
+    {
+        id: "scienze-biologia-umana-apparato-digerente-nutrizione",
+        area: "cultura-matematico-scientifica",
+        areaTitle: "Cultura matematico-scientifica",
+        number: 92,
+        title: "Scienze — Biologia umana: apparato digerente e nutrizione: nutrienti, digestione meccanica e chimica, bocca, esofago, stomaco, intestino tenue e crasso, fegato, pancreas, enzimi digestivi, assorbimento dei nutrienti, metabolismo e principi di alimentazione",
+        description:
+            "Principali nutrienti e loro funzioni, digestione meccanica e chimica, struttura e funzione degli organi dell'apparato digerente, ruolo di fegato, pancreas ed enzimi digestivi, assorbimento dei nutrienti, metabolismo e principi fondamentali di una corretta alimentazione.",
+        content: biologiaUmanaApparatoDigerenteNutrizione,
     },
 ];
 
