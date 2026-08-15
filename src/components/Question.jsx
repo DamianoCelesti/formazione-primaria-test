@@ -5,9 +5,15 @@ function Question({
 }) {
     return (
         <section className="question-card">
-            <p className="question-number">
-                Domanda {question.id}
-            </p>
+            <div className="question-card__header">
+                <p className="question-number">
+                    Domanda {question.id}
+                </p>
+
+                <span className="question-card__kind">
+                    Seleziona un'opzione
+                </span>
+            </div>
 
             {question.passage && (
                 <div className="question-passage">

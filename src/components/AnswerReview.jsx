@@ -186,13 +186,16 @@ function AnswerReview({
                         userAnswerId ===
                         correctAnswer.id;
 
+                    const reviewStatus = isCorrect
+                        ? "correct"
+                        : isAnswered
+                            ? "wrong"
+                            : "unanswered";
+
                     return (
                         <article
                             key={question.id}
-                            className={`review-card ${isCorrect
-                                    ? "review-card--correct"
-                                    : "review-card--wrong"
-                                }`}
+                            className={`review-card review-card--${reviewStatus}`}
                         >
                             <header className="review-card__header">
                                 <span className="review-card__number">
@@ -200,10 +203,7 @@ function AnswerReview({
                                 </span>
 
                                 <span
-                                    className={`review-card__status ${isCorrect
-                                            ? "review-card__status--correct"
-                                            : "review-card__status--wrong"
-                                        }`}
+                                    className={`review-card__status review-card__status--${reviewStatus}`}
                                 >
                                     {isCorrect
                                         ? "✓ Corretta"
@@ -229,10 +229,7 @@ function AnswerReview({
 
                             <div className="review-comparison">
                                 <div
-                                    className={`review-answer-box ${isCorrect
-                                            ? "review-answer-box--correct"
-                                            : "review-answer-box--wrong"
-                                        }`}
+                                    className={`review-answer-box review-answer-box--${reviewStatus}`}
                                 >
                                     <span className="review-answer-box__label">
                                         La tua risposta

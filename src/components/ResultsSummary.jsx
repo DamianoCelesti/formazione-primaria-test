@@ -12,6 +12,9 @@ function ResultsSummary({
     const unansweredQuestions =
         totalQuestions - answeredQuestions;
 
+    const incorrectQuestions =
+        answeredQuestions - score;
+
     return (
         <section className="results-summary">
             <div className="results-summary__header">
@@ -61,11 +64,11 @@ function ResultsSummary({
 
                 <div className="results-stat">
                     <span className="results-stat__value">
-                        {answeredQuestions}
+                        {incorrectQuestions}
                     </span>
 
                     <span className="results-stat__label">
-                        Risposte date
+                        Risposte errate
                     </span>
                 </div>
 

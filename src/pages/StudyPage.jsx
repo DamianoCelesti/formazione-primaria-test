@@ -1,6 +1,24 @@
 import { Link } from "react-router";
 import "../styles/study.css";
 
+const AREA_META = {
+    "linguistica-logica": {
+        symbol: "Aa",
+    },
+    letteratura: {
+        symbol: "¶",
+    },
+    storia: {
+        symbol: "↜",
+    },
+    geografia: {
+        symbol: "⌖",
+    },
+    "cultura-matematico-scientifica": {
+        symbol: "∑",
+    },
+};
+
 function StudyPage({
     topics,
     onOpenTopic,
@@ -50,59 +68,79 @@ function StudyPage({
 
                 <div className="study-areas">
                     {Object.entries(groupedTopics).map(
-                        ([areaId, area]) => (
-                            <section
-                                key={areaId}
-                                className="study-area"
-                            >
-                                <div className="study-area__header">
-                                    <h2>{area.title}</h2>
+                        ([areaId, area]) => {
+                            const areaMeta =
+                                AREA_META[areaId] ?? {
+                                    symbol: "•",
+                                };
 
-                                    <span>
-                                        {area.topics.length}{" "}
-                                        {area.topics.length === 1
-                                            ? "argomento"
-                                            : "argomenti"}
-                                    </span>
-                                </div>
-
-                                <div className="study-topic-grid">
-                                    {area.topics.map((topic) => (
-                                        <article
-                                            key={topic.id}
-                                            className="study-topic-card"
-                                        >
-                                            <div className="study-topic-card__number">
-                                                {topic.number}
-                                            </div>
-
-                                            <div className="study-topic-card__content">
-                                                <h3>
-                                                    {topic.title}
-                                                </h3>
-
-                                                <p>
-                                                    {
-                                                        topic.description
-                                                    }
-                                                </p>
-                                            </div>
-
-                                            <Link
-                                                to={`/studio/${topic.id}`}
-                                                onClick={() =>
-                                                    onOpenTopic(
-                                                        topic.id,
-                                                    )
-                                                }
+                            return (
+                                <section
+                                    key={areaId}
+                                    className={`study-area study-area--${areaId}`}
+                                >
+                                    <div className="study-area__header">
+                                        <div className="study-area__heading">
+                                            <span
+                                                className="study-area__icon"
+                                                aria-hidden="true"
                                             >
-                                                Studia
-                                            </Link>
-                                        </article>
-                                    ))}
-                                </div>
-                            </section>
-                        ),
+                                                {areaMeta.symbol}
+                                            </span>
+
+                                            <h2>{area.title}</h2>
+                                        </div>
+
+                                        <span>
+                                            {area.topics.length}{" "}
+                                            {area.topics.length === 1
+                                                ? "argomento"
+                                                : "argomenti"}
+                                        </span>
+                                    </div>
+
+                                    <div className="study-topic-grid">
+                                        {area.topics.map((topic) => (
+                                            <article
+                                                key={topic.id}
+                                                className="study-topic-card"
+                                            >
+                                                <div className="study-topic-card__number">
+                                                    {topic.number}
+                                                </div>
+
+                                                <div className="study-topic-card__content">
+                                                    <span className="study-topic-card__area">
+                                                        {area.title}
+                                                    </span>
+
+                                                    <h3>
+                                                        {topic.title}
+                                                    </h3>
+
+                                                    <p>
+                                                        {
+                                                            topic.description
+                                                        }
+                                                    </p>
+                                                </div>
+
+                                                <Link
+                                                    to={`/studio/${topic.id}`}
+                                                    onClick={() =>
+                                                        onOpenTopic(
+                                                            topic.id,
+                                                        )
+                                                    }
+                                                >
+                                                    Apri argomento
+                                                </Link>
+                                            </article>
+                                        ))}
+                                    </div>
+                                </section>
+                            );
+                        },
                     )}
                 </div>
             </div>

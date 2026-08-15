@@ -13,6 +13,10 @@ function HomePage({
     return (
         <main className="home-page">
             <header className="home-header">
+                <p className="home-header__eyebrow">
+                    Preparazione 2026 · Accesso gratuito
+                </p>
+
                 <h1>
                     Test Scienze della Formazione Primaria 2026
                 </h1>
@@ -34,7 +38,15 @@ function HomePage({
                     onClick={onOpenStudy}
                 >
                     <div className="home-study-card__icon">
-                        📚
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            strokeWidth="1.8"
+                            aria-hidden="true"
+                        >
+                            <path d="M4.75 5.5A2.5 2.5 0 0 1 7.25 3H11v15H7.25a2.5 2.5 0 0 0-2.5 2.5V5.5Z" />
+                            <path d="M19.25 5.5A2.5 2.5 0 0 0 16.75 3H13v15h3.75a2.5 2.5 0 0 1 2.5 2.5V5.5Z" />
+                        </svg>
                     </div>
 
                     <div className="home-study-card__content">
@@ -116,19 +128,31 @@ function HomePage({
                             statusText = "Completata";
                         }
 
+                        const statusClass = isCompleted
+                            ? "completed"
+                            : isInProgress
+                                ? "in-progress"
+                                : "not-started";
+
                         return (
                             <article
                                 key={simulation.id}
-                                className="simulation-card"
+                                className={`simulation-card simulation-card--${statusClass}`}
                             >
-                                <div className="simulation-card__status">
-                                    <span>
-                                        {statusSymbol}
+                                <div className="simulation-card__top">
+                                    <span className="simulation-card__number">
+                                        Simulazione {simulation.number}
                                     </span>
 
-                                    <span>
-                                        {statusText}
-                                    </span>
+                                    <div className="simulation-card__status">
+                                        <span>
+                                            {statusSymbol}
+                                        </span>
+
+                                        <span>
+                                            {statusText}
+                                        </span>
+                                    </div>
                                 </div>
 
                                 <h3>

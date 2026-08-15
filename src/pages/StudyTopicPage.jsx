@@ -196,6 +196,21 @@ function StudyTopicPage({
                                             {...props}
                                         />
                                     ),
+                                    table: ({
+                                        children,
+                                        ...props
+                                    }) => (
+                                        <div
+                                            className="study-table-wrap"
+                                            tabIndex="0"
+                                            role="region"
+                                            aria-label="Tabella dell'argomento"
+                                        >
+                                            <table {...props}>
+                                                {children}
+                                            </table>
+                                        </div>
+                                    ),
                                 }}
                             >
                                 {content}

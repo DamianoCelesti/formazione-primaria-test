@@ -9,7 +9,26 @@ function QuestionNavigator({
             className="question-navigation"
             aria-label="Navigazione domande"
         >
-            <h2>Vai a una domanda</h2>
+            <div className="question-navigation__header">
+                <h2>Vai a una domanda</h2>
+
+                <div
+                    className="question-navigator__legend"
+                    aria-label="Legenda degli stati"
+                >
+                    <span className="is-current">
+                        Corrente
+                    </span>
+
+                    <span className="is-answered">
+                        Risposta data
+                    </span>
+
+                    <span>
+                        Da completare
+                    </span>
+                </div>
+            </div>
 
             <div className="question-navigator">
                 {questions.map((question, index) => {
