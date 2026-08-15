@@ -202,6 +202,8 @@ import scienzeTerraIdrosferaCicloAcqua from "../content/study/scienze/scienze-te
 
 import astronomiaSistemaSolareUniverso from "../content/study/scienze/astronomia-sistema-solare-universo.md?url&no-inline";
 
+import fisicaFluidiDensitaPressione from "../content/study/scienze/fisica-fluidi-densita-pressione.md?url&no-inline";
+
 const studyTopics = [
     {
         id: "comprensione-del-testo",
@@ -1224,6 +1226,16 @@ const studyTopics = [
         description:
             "Struttura del Sistema Solare, caratteristiche del Sole e dei pianeti terrestri e giganti, satelliti, asteroidi e comete, leggi di Keplero e gravità, moti della Terra e loro conseguenze, stagioni, Luna, fasi ed eclissi, stelle, galassie e organizzazione generale dell'Universo.",
         content: astronomiaSistemaSolareUniverso,
+    },
+    {
+        id: "scienze-fisica-fluidi-densita-pressione",
+        area: "cultura-matematico-scientifica",
+        areaTitle: "Cultura matematico-scientifica",
+        number: 105,
+        title: "Scienze — Fisica integrativa: fluidi, densità e pressione — pressione nei liquidi, legge di Stevino, principio di Pascal, vasi comunicanti, pressione atmosferica, principio di Archimede, galleggiamento, spinta idrostatica e applicazioni fondamentali",
+        description:
+            "Proprietà fondamentali dei fluidi, densità e pressione, pressione idrostatica e legge di Stevino, principio di Pascal e vasi comunicanti, pressione atmosferica, principio di Archimede, spinta idrostatica, condizioni di galleggiamento e principali applicazioni.",
+        content: fisicaFluidiDensitaPressione,
     },
 ];
 
