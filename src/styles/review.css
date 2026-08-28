@@ -28,7 +28,7 @@
     line-height: 1.2;
 }
 
-.review-header > p:last-child {
+.review-header>p:last-child {
     max-width: 680px;
     margin: 0;
     color: var(--color-text-muted);
@@ -122,6 +122,57 @@
     overflow-wrap: anywhere;
 }
 
+
+/* ========================================
+   QUESTION IMAGE - REVIEW
+======================================== */
+
+.review-question-image {
+    width: 100%;
+    margin: 24px 0 30px;
+    text-align: center;
+}
+
+.review-question-image img {
+    display: block;
+
+    width: auto;
+    max-width: min(100%, 760px);
+    max-height: 520px;
+    height: auto;
+
+    object-fit: contain;
+
+    margin: 0 auto;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+
+    background: #ffffff;
+}
+
+.review-question-image figcaption {
+    max-width: 760px;
+
+    margin: 10px auto 0;
+
+    font-size: 0.875rem;
+    line-height: 1.5;
+
+    color: #64748b;
+}
+
+@media (max-width: 768px) {
+    .review-question-image {
+        margin: 20px 0 24px;
+    }
+
+    .review-question-image img {
+        max-width: 100%;
+        max-height: 420px;
+    }
+}
+
 .review-passage span {
     display: block;
     margin-bottom: var(--space-2);
@@ -208,7 +259,7 @@
     border-top: 1px solid var(--color-border);
 }
 
-.review-explanations > h4 {
+.review-explanations>h4 {
     margin: 0 0 var(--space-4);
     color: var(--color-text);
     font-size: 1rem;
@@ -270,14 +321,14 @@
     gap: var(--space-3);
 }
 
-.review-option__top > div:first-child {
+.review-option__top>div:first-child {
     display: flex;
     min-width: 0;
     align-items: flex-start;
     gap: var(--space-2);
 }
 
-.review-option__top > div:first-child strong {
+.review-option__top>div:first-child strong {
     min-width: 0;
     color: var(--color-text);
     line-height: 1.45;

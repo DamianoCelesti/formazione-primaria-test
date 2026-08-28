@@ -29,6 +29,27 @@ function Question({
                 {question.question}
             </h2>
 
+            {question.questionImage && (
+                <figure className="question-image">
+                    <img
+                        src={question.questionImage.src}
+                        alt={
+                            question.questionImage.alt ||
+                            "Immagine relativa alla domanda"
+                        }
+                    />
+
+                    {question.questionImage.caption && (
+                        <figcaption>
+                            {
+                                question.questionImage
+                                    .caption
+                            }
+                        </figcaption>
+                    )}
+                </figure>
+            )}
+
             <div className="question-answers">
                 {question.answers.map((answer) => (
                     <label
@@ -40,10 +61,13 @@ function Question({
                             name={`question-${question.id}`}
                             value={answer.id}
                             checked={
-                                selectedAnswer === answer.id
+                                selectedAnswer ===
+                                answer.id
                             }
                             onChange={() =>
-                                onSelectAnswer(answer.id)
+                                onSelectAnswer(
+                                    answer.id,
+                                )
                             }
                         />
 
@@ -59,4 +83,4 @@ function Question({
     );
 }
 
-export default Question;
+export default Question; 

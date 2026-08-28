@@ -227,6 +227,25 @@ function AnswerReview({
                                 {question.question}
                             </h3>
 
+                            {question.questionImage && (
+                                <figure className="review-question-image">
+                                    <img
+                                        src={question.questionImage.src}
+                                        alt={
+                                            question.questionImage.alt ||
+                                            "Immagine relativa alla domanda"
+                                        }
+                                        loading="lazy"
+                                    />
+
+                                    {question.questionImage.caption && (
+                                        <figcaption>
+                                            {question.questionImage.caption}
+                                        </figcaption>
+                                    )}
+                                </figure>
+                            )}
+
                             <div className="review-comparison">
                                 <div
                                     className={`review-answer-box review-answer-box--${reviewStatus}`}
@@ -290,8 +309,8 @@ function AnswerReview({
                                                 <div
                                                     key={answer.id}
                                                     className={`review-option ${answer.correct
-                                                            ? "review-option--correct"
-                                                            : ""
+                                                        ? "review-option--correct"
+                                                        : ""
                                                         } ${wasSelected &&
                                                             !answer.correct
                                                             ? "review-option--selected-wrong"
@@ -302,8 +321,8 @@ function AnswerReview({
                                                         <div>
                                                             <span
                                                                 className={`review-option__letter ${answer.correct
-                                                                        ? "review-option__letter--correct"
-                                                                        : ""
+                                                                    ? "review-option__letter--correct"
+                                                                    : ""
                                                                     }`}
                                                             >
                                                                 {answer.correct
