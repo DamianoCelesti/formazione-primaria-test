@@ -88,6 +88,15 @@ const simulations = [
             import("./simulation10.js").then(
                 (module) => module.default,
             ),
+    },
+    {
+        id: "simulation-11",
+        number: 11,
+        title: "Simulazione 11",
+        loadQuestions: () =>
+            import("./simulation11.js").then(
+                (module) => module.default,
+            ),
     }
 ];
 
