@@ -597,7 +597,7 @@ const simulation14 = [
         question:
             "Dopo aver individuato la logica che lega due delle tre parole, inserire il termine mancate.",
         questionImage: {
-            src: `${import.meta.env.BASE_URL}resources/questions/simulation14/domanda-15.png`,
+            src: `${import.meta.env.BASE_URL}resources/simulation14/domanda-15.png`,
             alt: "Schema analogico con bue in alto a sinistra, ape in alto a destra, punto interrogativo in basso a sinistra e sciame in basso a destra",
         },
         answers: [
@@ -1263,7 +1263,7 @@ const simulation14 = [
         question:
             "Uno solo dei disegni contrassegnati con lettere costituisce il logico completamento della serie di disegni numerata da 1 a 5. Quale?",
         questionImage: {
-            src: `${import.meta.env.BASE_URL}resources/questions/simulation14/domanda-32.png`,
+            src: `${import.meta.env.BASE_URL}resources/simulation14/domanda-32.png`,
             alt: "Serie figurale circolare numerata da 1 a 5 con la figura 2 mancante e quattro alternative A, B, C e D",
         },
         answers: [

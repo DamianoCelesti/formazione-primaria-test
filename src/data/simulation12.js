@@ -2737,7 +2737,7 @@ const simulation12 = [
         question:
             "La seguente tabella riporta i dati sugli stipendi dei dipendenti. Indicare la risposta vera:",
         questionImage: {
-            src: `${import.meta.env.BASE_URL}resources/questions/simulation12/domanda-70.png`,
+            src: `${import.meta.env.BASE_URL}resources/simulation12/domanda-70.png`,
             alt: "Tabella degli stipendi mensili dei dipendenti con stipendio in euro e numero di dipendenti",
         },
         answers: [
